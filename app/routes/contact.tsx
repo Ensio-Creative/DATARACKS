@@ -1,5 +1,15 @@
 import React from 'react';
 import Hero from '~/components/Hero';
+import type { Route } from './+types/contact';
+
+export function meta({ }: Route.MetaArgs) {
+    return [
+        {
+            title: "Contact Us | Dataracks"
+        },
+    ];
+}
+
 
 const contact = () => {
     return (

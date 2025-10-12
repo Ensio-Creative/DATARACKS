@@ -11,8 +11,9 @@ import 'swiper/css/pagination';
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    {
+      title: "Dataracks | Data center and telecom solutions"
+    },
   ];
 }
 
@@ -35,7 +36,7 @@ export default function Home() {
   return <>
     <Hero />
 
-    <section className="max-w-6xl mx-auto my-32 px-6">
+    <section className="max-w-7xl mx-auto my-32 px-4">
       <h1 className="text-5xl font-light text-center">From server cabinets to aisle containment and security cages, Dataracks designs and manufactures complete data centre solutions engineered for performance, efficiency, and sustainability.</h1>
     </section>
 

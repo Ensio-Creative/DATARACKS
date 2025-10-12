@@ -1,5 +1,15 @@
 import React from 'react';
 import Hero from '~/components/Hero';
+import type { Route } from './+types/about';
+
+export function meta({ }: Route.MetaArgs) {
+    return [
+        {
+            title: "About Us | Dataracks"
+        },
+    ];
+}
+
 
 const about = () => {
   const team = [

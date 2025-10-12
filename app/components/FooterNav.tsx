@@ -34,8 +34,8 @@ const FooterNav = () => (
             <div>
                 <h4 className=" mb-3 text-[#595853]">Connect with Us</h4>
                 <ul className="space-y-1">
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">Twitter</a></li>
+                    <li><a href="https://www.linkedin.com/company/dataracks" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://x.com/dataracksuk" target="_blank">Twitter</a></li>
                 </ul>
             </div>
         </div>
