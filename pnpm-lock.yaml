@@ -26,6 +26,9 @@ importers:
       react-router:
         specifier: ^7.9.2
         version: 7.9.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      swiper:
+        specifier: ^12.0.2
+        version: 12.0.2
     devDependencies:
       '@react-router/dev':
         specifier: ^7.9.2
@@ -1415,6 +1418,10 @@ packages:
   strip-ansi@7.1.2:
     resolution: {integrity: sha512-gmBGslpoQJtgnMAvOVqGZpEz9dyoKTCzy2nfz/n8aIFhN/jCE/rCmcxabB6jOOHV+0WNnylOxaxBQPSvcWklhA==}
     engines: {node: '>=12'}
+
+  swiper@12.0.2:
+    resolution: {integrity: sha512-y8F6fDGXmTVVgwqJj6I00l4FdGuhpFJn0U/9Ucn1MwWOw3NdLV8aH88pZOjyhBgU/6PyBlUx+JuAQ5KMWz906Q==}
+    engines: {node: '>= 4.7.0'}
 
   tailwindcss@4.1.14:
     resolution: {integrity: sha512-b7pCxjGO98LnxVkKjaZSDeNuljC4ueKUddjENJOADtubtdo8llTaJy7HwBMeLNSSo2N5QIAgklslK1+Ir8r6CA==}
@@ -2887,6 +2894,8 @@ snapshots:
   strip-ansi@7.1.2:
     dependencies:
       ansi-regex: 6.2.2
+
+  swiper@12.0.2: {}
 
   tailwindcss@4.1.14: {}
 
