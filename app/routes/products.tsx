@@ -18,13 +18,13 @@ const products = () => {
             <Hero title="Products" image='/images/dataracks-products-header.jpg' />
 
             <section className="max-w-7xl mx-auto my-32 px-4">
-                <h1 className="text-5xl font-light md:w-[80%]">
+                <h1 className="md:text-5xl text-3xl font-light md:w-[80%]">
                     From our UK factory, we design and manufacture a comprehensive range of  products, including server cabinets, aisle containment systems, and security cages to meet the needs of our global client.
                 </h1>
             </section>
 
             <section className='max-w-7xl mx-auto my-20 px-4'>
-                <div className="grid md:grid-cols-3 gap-20 border-y border-[#CFCFCF] py-10">
+                <div className="grid md:grid-cols-3 md:gap-20 gap-4 border-y border-[#CFCFCF] py-10">
                     <div>
                         <p className='text-3xl font-light'>Server Cabinets</p>
                     </div>
@@ -37,7 +37,7 @@ const products = () => {
                     </div>
 
                 </div>
-                <div className="grid md:grid-cols-3 gap-20 border-b border-[#CFCFCF] py-10">
+                <div className="grid md:grid-cols-3 md:gap-20 gap-4 border-b border-[#CFCFCF] py-10">
                     <div>
                         <p className='text-3xl font-light'>Aisle Containment</p>
                     </div>
@@ -49,7 +49,7 @@ const products = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="grid md:grid-cols-3 gap-20 py-10">
+                <div className="grid md:grid-cols-3 md:gap-20 gap-4 py-10">
                     <div>
                         <p className='text-3xl font-light'>Security Cages</p>
                     </div>

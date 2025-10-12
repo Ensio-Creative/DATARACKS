@@ -37,7 +37,7 @@ export default function Home() {
     <Hero />
 
     <section className="max-w-7xl mx-auto my-32 px-4">
-      <h1 className="text-5xl font-light text-center">From server cabinets to aisle containment and security cages, Dataracks designs and manufactures complete data centre solutions engineered for performance, efficiency, and sustainability.</h1>
+      <h1 className="md:text-5xl text-3xl font-light text-center">From server cabinets to aisle containment and security cages, Dataracks designs and manufactures complete data centre solutions engineered for performance, efficiency, and sustainability.</h1>
     </section>
 
     <section className="bg-[#EAF4FF] py-20">
@@ -45,9 +45,9 @@ export default function Home() {
         <img
           src="/images/dataracks-story.jpg"
           alt="Data centre"
-          className="w-[70%] object-cover"
+          className="md:w-[70%] object-cover"
         />
-        <div className="absolute bg-white my-auto p-10 max-w-xl text-left right-32 bottom-0 top-0 h-96">
+        <div className="md:absolute md:bg-white my-auto p-10 max-w-xl text-left right-32 bottom-0 top-0 h-96">
           <h3 className="text-4xl font-light mb-4">Our Story</h3>
           <p className="text-[#595853] text-base leading-relaxed">
             Backed by decades of industry experience, Dataracks leads the way in designing and manufacturing high-performance data centre infrastructure trusted by clients worldwide. From concept to installation, we deliver reliable, flexible, and energy-efficient solutions that power the world’s most advanced data facilities.
@@ -59,21 +59,21 @@ export default function Home() {
     </section>
 
     <section className="max-w-7xl mx-auto py-20 px-4">
-      <h3 className="text-4xl mb-4 font-light">Our Products</h3>
-      <div className="grid md:grid-cols-2 gap-6">
+      <h3 className="md:text-4xl text-3xl mb-4 font-light">Our Products</h3>
+      <div className="md:grid md:grid-cols-2 gap-6">
         {products.map((p, index) => (
           <div key={p.name} className={`${index === 0 && "col-span-2"} relative group`}>
-            <img src={p.img} alt={p.name} className="w-full" />
+            <img src={p.img} alt={p.name} className="w-full md:h-full h-80 object-cover md:my-0 my-4" />
             <div className="absolute bottom-6 left-6">
-              <p className="text-white text-4xl font-light">{p.name}</p>
+              <p className="text-white md:text-4xl text-2xl font-light">{p.name}</p>
             </div>
           </div>
         ))}
       </div>
     </section>
 
-    <section className="max-w-7xl mx-auto py-20 px-4">
-      <h3 className="text-4xl mb-4 font-light">Our Sectors</h3>
+    <section className="max-w-7xl mx-auto md:pt-20 pb-20 px-4">
+      <h3 className="md:text-4xl text-3xl mb-4 font-light">Our Sectors</h3>
       <div className="grid md:grid-cols-3 gap-6">
         {sectors.map((p, index) => (
           <div key={p} className={`relative group`}>

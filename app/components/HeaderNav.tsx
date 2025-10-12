@@ -38,9 +38,67 @@ const HeaderNav = () => {
                     <Link to="/" className="hover:text-primary transition">
                         Home
                     </Link>
-                    <Link to="/products" className="hover:text-primary transition">
-                        Products
-                    </Link>
+
+                    {/* Products Dropdown */}
+                    <div
+                        className=" group"
+                        onMouseEnter={() => setIsProductsOpen(true)}
+                    >
+                        <button className="hover:text-primary transition flex items-center space-x-1">
+                            <Link to="/products">
+                                Products
+                                <span className="text-sm"> {isProductsOpen ? "▲" : "▼"} </span>
+                            </Link>
+                        </button>
+
+                        {/* Dropdown Menu */}
+                        {isProductsOpen && (
+                            <div onMouseLeave={() => setIsProductsOpen(false)}
+                                className="absolute left-0 right-0 top-full w-screen bg-white shadow-lg border-t border-[#CFCFCF]">
+                                <div className="max-w-6xl ml-auto px-10 py-8 grid grid-cols-3 gap-6">
+                                    {/* Product 1 */}
+                                    <Link
+                                        to="/products/server-cabinets"
+                                        className="hover:opacity-80 transition"
+                                    >
+                                        <img
+                                            src="/images/header/dataracks-home-server-cabinets-product.jpg"
+                                            alt="Server Cabinets"
+                                            className="mb-4 h-40 w-full object-cover"
+                                        />
+                                        <p className="text-[#0F0765]">Server Cabinets</p>
+                                    </Link>
+
+                                    {/* Product 2 */}
+                                    <Link
+                                        to="/products/aisle-containment"
+                                        className="hover:opacity-80 transition"
+                                    >
+                                        <img
+                                            src="/images/header/dataracks-home-aisle-containment.jpg"
+                                            alt="Aisle Containment"
+                                            className="mb-4 h-40 w-full object-cover"
+                                        />
+                                        <p className="text-[#0F0765]">Aisle Containment</p>
+                                    </Link>
+
+                                    {/* Product 3 */}
+                                    <Link
+                                        to="/products/security-cages"
+                                        className="hover:opacity-80 transition"
+                                    >
+                                        <img
+                                            src="/images/header/dataracks-home-security-cages-product.jpg"
+                                            alt="Security Cages"
+                                            className="mb-4 h-40 w-full object-cover"
+                                        />
+                                        <p className="text-[#0F0765]">Security Cages</p>
+                                    </Link>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+
                     <Link to="/about" className="hover:text-primary transition">
                         About us
                     </Link>
@@ -62,20 +120,19 @@ const HeaderNav = () => {
 
             {/* Mobile Menu Overlay */}
             {menuOpen && (
-                <div className="fixed inset-0 bg-white z-50 flex flex-col justify-between px-5 py-6">
+                <div className="fixed inset-0 bg-white z-40 flex flex-col justify-between px-5 py-6">
                     <div>
-                        <div className="flex justify-between items-center mb-6">
+                        {/* <div className="flex justify-between items-center mb-6">
                             <img src="/images/dataracks-logo2.svg" alt="Dataracks" className="w-32" />
                             <button onClick={() => setMenuOpen(false)} className="text-[#0F0765] text-sm">
                                 Close
                             </button>
-                        </div>
+                        </div> */}
 
-                        <p className="text-gray-500 text-sm mb-2 mt-12">Navigation</p>
+                        <p className="text-gray-500 text-sm mb-2 mt-20">Navigation</p>
                         <hr className="mb-4 border-gray-300" />
 
                         <ul className="space-y-6 text-[#0F0765]">
-
                             <li className="text-2xl font-light border-b border-gray-200 pb-2">
                                 <Link to="/" onClick={() => setMenuOpen(false)}>
                                     Home
@@ -85,9 +142,11 @@ const HeaderNav = () => {
                             <li className="text-2xl font-light border-b border-gray-200 pb-2">
                                 <details open={isProductsOpen} onToggle={() => setIsProductsOpen(!isProductsOpen)}>
                                     <summary className="flex justify-between items-center cursor-pointer">
-                                        <Link to="/products" onClick={() => setMenuOpen(false)}>
-                                            Products
-                                        </Link>
+                                        <span>
+                                            <Link to="/products" onClick={() => setMenuOpen(false)}>
+                                                Products
+                                            </Link>
+                                        </span>
                                         <span className="text-3xl">{isProductsOpen ? "−" : "+"}</span>
                                     </summary>
                                     <ul className="ml-6 mt-3 space-y-3 text-base">
@@ -129,7 +188,6 @@ const HeaderNav = () => {
                     </div>
                 </div>
             )}
-
         </header>
     );
 };

@@ -39,7 +39,7 @@ const FooterNav = () => (
                 </ul>
             </div>
         </div>
-        <div className="border-t px-4 border-[#CFCFCF] flex justify-between max-w-7xl mx-auto pt-10 mt-10">
+        <div className="border-t px-4 border-[#CFCFCF] md:flex justify-between max-w-7xl mx-auto pt-10 mt-10">
             <p>© 2025 Dataracks. All Rights Reserved.</p>
 
             <img src="/images/made-in-britain.jpg" alt="" />
