@@ -4,15 +4,12 @@ import { Link } from "react-router";
 const HeaderNav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isProductsOpen, setIsProductsOpen] = useState(false);
 
     // Track scroll position
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 20) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
+            setIsScrolled(window.scrollY > 20);
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
@@ -25,9 +22,9 @@ const HeaderNav = () => {
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center h-20 px-4">
                 {/* Logo */}
-                <Link to="/" className="flex items-center">
+                <Link to="/" className="flex items-center z-50">
                     <img
-                        src={`/images/dataracks-logo${isScrolled ? "2" : "1"}.svg`}
+                        src={`/images/dataracks-logo${isScrolled || menuOpen ? "2" : "1"}.svg`}
                         alt="Dataracks"
                         className="w-36"
                     />
@@ -38,64 +35,101 @@ const HeaderNav = () => {
                     className={`hidden md:flex space-x-8 transition ${isScrolled ? "text-[#0F0765]" : "text-white"
                         }`}
                 >
-                    <Link to="/" className="hover:text-primary transition">Home</Link>
-                    <Link to="/products" className="hover:text-primary transition">Products</Link>
-                    <Link to="/about" className="hover:text-primary transition">About us</Link>
-                    <Link to="/contact" className="hover:text-primary transition">Contact us</Link>
+                    <Link to="/" className="hover:text-primary transition">
+                        Home
+                    </Link>
+                    <Link to="/products" className="hover:text-primary transition">
+                        Products
+                    </Link>
+                    <Link to="/about" className="hover:text-primary transition">
+                        About us
+                    </Link>
+                    <Link to="/contact" className="hover:text-primary transition">
+                        Contact us
+                    </Link>
                 </nav>
 
                 {/* Mobile Menu Button */}
                 <button
-                    onClick={() => setMenuOpen(true)}
-                    className={`md:hidden p-2 rounded focus:outline-none transition ${isScrolled ? "text-gray-800" : "text-white"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    className={`md:hidden p-2 rounded focus:outline-none transition z-50 ${isScrolled || menuOpen ? "text-gray-800" : "text-white"
                         }`}
                     aria-label="Toggle menu"
                 >
-                    ☰
+                    {menuOpen ? "Close" : "Menu"}
                 </button>
             </div>
 
-            {/* Fullscreen Mobile Menu Overlay */}
+            {/* Mobile Menu Overlay */}
             {menuOpen && (
-                <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center space-y-8 text-gray-800 font-medium text-lg transition-all duration-300">
-                    <button
-                        onClick={() => setMenuOpen(false)}
-                        className="absolute top-6 right-6 text-3xl font-bold text-gray-700"
-                        aria-label="Close menu"
-                    >
-                        ✕
-                    </button>
+                <div className="fixed inset-0 bg-white z-50 flex flex-col justify-between px-5 py-6">
+                    <div>
+                        <div className="flex justify-between items-center mb-6">
+                            <img src="/images/dataracks-logo2.svg" alt="Dataracks" className="w-32" />
+                            <button onClick={() => setMenuOpen(false)} className="text-[#0F0765] text-sm">
+                                Close
+                            </button>
+                        </div>
 
-                    <Link
-                        to="/"
-                        onClick={() => setMenuOpen(false)}
-                        className="hover:text-primary transition"
-                    >
-                        Home
-                    </Link>
-                    <Link
-                        to="/products"
-                        onClick={() => setMenuOpen(false)}
-                        className="hover:text-primary transition"
-                    >
-                        Products
-                    </Link>
-                    <Link
-                        to="/about"
-                        onClick={() => setMenuOpen(false)}
-                        className="hover:text-primary transition"
-                    >
-                        About us
-                    </Link>
-                    <Link
-                        to="/contact"
-                        onClick={() => setMenuOpen(false)}
-                        className="hover:text-primary transition"
-                    >
-                        Contact us
-                    </Link>
+                        <p className="text-gray-500 text-sm mb-2 mt-12">Navigation</p>
+                        <hr className="mb-4 border-gray-300" />
+
+                        <ul className="space-y-6 text-[#0F0765]">
+
+                            <li className="text-2xl font-light border-b border-gray-200 pb-2">
+                                <Link to="/" onClick={() => setMenuOpen(false)}>
+                                    Home
+                                </Link>
+                            </li>
+
+                            <li className="text-2xl font-light border-b border-gray-200 pb-2">
+                                <details open={isProductsOpen} onToggle={() => setIsProductsOpen(!isProductsOpen)}>
+                                    <summary className="flex justify-between items-center cursor-pointer">
+                                        <Link to="/products" onClick={() => setMenuOpen(false)}>
+                                            Products
+                                        </Link>
+                                        <span className="text-3xl">{isProductsOpen ? "−" : "+"}</span>
+                                    </summary>
+                                    <ul className="ml-6 mt-3 space-y-3 text-base">
+                                        <li>
+                                            <Link to="/products/server-cabinets" onClick={() => setMenuOpen(false)}>
+                                                Server Cabinets
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/products/aisle-containment" onClick={() => setMenuOpen(false)}>
+                                                Aisle Containment
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/products/security-cages" onClick={() => setMenuOpen(false)}>
+                                                Security Cages
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </details>
+                            </li>
+
+                            <li className="text-2xl font-light border-b border-gray-200 pb-2">
+                                <Link to="/about" onClick={() => setMenuOpen(false)}>
+                                    About us
+                                </Link>
+                            </li>
+                            <li className="text-2xl font-light border-b border-gray-200 pb-2">
+                                <Link to="/contact" onClick={() => setMenuOpen(false)}>
+                                    Contact us
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="text-[#0F0765] text-sm space-y-2">
+                        <p>T: +44(0)1954 252800</p>
+                        <p>E: sales@dataracks.co.uk</p>
+                    </div>
                 </div>
             )}
+
         </header>
     );
 };

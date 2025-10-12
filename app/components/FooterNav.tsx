@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const FooterNav = () => (
     <footer className="bg-[#EAF4FF] py-10">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-6 gap-8 text-[#0F0765]">
+        <div className="max-w-7xl px-4 mx-auto grid md:grid-cols-6 gap-8 text-[#0F0765]">
             <div className="md:col-span-2">
                 <img src="/images/dataracks-logo2.svg" alt="Dataracks" className="w-36 mb-4" />
             </div>
@@ -39,7 +39,7 @@ const FooterNav = () => (
                 </ul>
             </div>
         </div>
-        <div className="border-t border-[#CFCFCF] flex justify-between max-w-7xl mx-auto pt-10 mt-10">
+        <div className="border-t px-4 border-[#CFCFCF] flex justify-between max-w-7xl mx-auto pt-10 mt-10">
             <p>© 2025 Dataracks. All Rights Reserved.</p>
 
             <img src="/images/made-in-britain.jpg" alt="" />
