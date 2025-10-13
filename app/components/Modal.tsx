@@ -23,7 +23,7 @@ const Modal: React.FC<ModalProps> = ({ show, image, content, onClose, title }) =
                 </button>
 
                 {/* Image Section */}
-                <div className="grid md:grid-cols-3 md:gap-10 gap-4">
+                <div className="md:grid md:grid-cols-3 md:gap-10 gap-4">
                     <img
                         src={image}
                         alt="modal visual"

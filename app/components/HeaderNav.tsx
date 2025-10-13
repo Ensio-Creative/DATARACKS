@@ -45,9 +45,10 @@ const HeaderNav = () => {
                         onMouseEnter={() => setIsProductsOpen(true)}
                     >
                         <button className="hover:text-primary transition flex items-center space-x-1">
-                            <Link to="/products">
-                                Products
-                                <span className="text-sm"> {isProductsOpen ? "▲" : "▼"} </span>
+                            <Link to="/products" className="flex gap-1">
+                                <span>Products</span>
+                                <img src="/images/arrow.svg" className={`${isProductsOpen ? 'rotate-180' : ""}`} alt="" />
+                                {/* <span className="text-sm"> {isProductsOpen ?  : "▼"} </span> */}
                             </Link>
                         </button>
 
