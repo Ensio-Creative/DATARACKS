@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const FooterNav = () => (
     <footer className="bg-[#EAF4FF] py-10">
-        <div className="max-w-7xl px-4 mx-auto grid md:grid-cols-6 gap-8 text-[#0F0765]">
+        <div className="max-w-7xl my-18 px-4 mx-auto grid md:grid-cols-6 gap-1 text-[#0F0765]">
             <div className="md:col-span-2">
                 <img src="/images/dataracks-logo2.svg" alt="Dataracks" className="w-36 mb-4" />
             </div>

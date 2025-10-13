@@ -2,8 +2,12 @@
 
 @import "tailwindcss";
 
-body{
+body {
     font-family: "Epilogue", sans-serif;
     color: #0F0765;
     font-weight: 400;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0F0765 !important;
 }

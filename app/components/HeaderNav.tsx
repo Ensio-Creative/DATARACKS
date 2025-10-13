@@ -17,14 +17,14 @@ const HeaderNav = () => {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-sm" : "bg-transparent"
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isProductsOpen ? "bg-white shadow-sm" : "bg-transparent"
                 }`}
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center h-20 px-4">
                 {/* Logo */}
                 <Link to="/" className="flex items-center z-50">
                     <img
-                        src={`/images/dataracks-logo${isScrolled || menuOpen ? "2" : "1"}.svg`}
+                        src={`/images/dataracks-logo${isScrolled || menuOpen || isProductsOpen ? "2" : "1"}.svg`}
                         alt="Dataracks"
                         className="w-36"
                     />
@@ -32,7 +32,7 @@ const HeaderNav = () => {
 
                 {/* Desktop Navigation */}
                 <nav
-                    className={`hidden md:flex space-x-8 transition ${isScrolled ? "text-[#0F0765]" : "text-white"
+                    className={`hidden md:flex space-x-8 transition ${isScrolled || isProductsOpen ? "text-[#0F0765]" : "text-white"
                         }`}
                 >
                     <Link to="/" className="hover:text-primary transition">
@@ -67,7 +67,7 @@ const HeaderNav = () => {
                                             alt="Server Cabinets"
                                             className="mb-4 h-40 w-full object-cover"
                                         />
-                                        <p className="text-[#0F0765]">Server Cabinets</p>
+                                        <p className="text-[#0F0765] text-lg">Server Cabinets</p>
                                     </Link>
 
                                     {/* Product 2 */}
@@ -80,7 +80,7 @@ const HeaderNav = () => {
                                             alt="Aisle Containment"
                                             className="mb-4 h-40 w-full object-cover"
                                         />
-                                        <p className="text-[#0F0765]">Aisle Containment</p>
+                                        <p className="text-[#0F0765] text-lg">Aisle Containment</p>
                                     </Link>
 
                                     {/* Product 3 */}
@@ -93,7 +93,7 @@ const HeaderNav = () => {
                                             alt="Security Cages"
                                             className="mb-4 h-40 w-full object-cover"
                                         />
-                                        <p className="text-[#0F0765]">Security Cages</p>
+                                        <p className="text-[#0F0765] text-lg">Security Cages</p>
                                     </Link>
                                 </div>
                             </div>

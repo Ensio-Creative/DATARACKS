@@ -37,12 +37,12 @@ const about = () => {
   return (
     <>
       <Hero title="About Us" image='/images/about-img.jpg' />
-      <div className='grid md:grid-cols-2 gap-4 max-w-7xl mx-auto px-4 py-16'>
+      <div className='grid md:grid-cols-2 gap-4 max-w-7xl mx-auto px-4 py-[120px]'>
         <div>
           <p className='md:text-5xl text-3xl font-light'>Data centre and telecom solutions manufacturer</p>
         </div>
         <div>
-          <p>From pioneering products to leading designs, Dataracks has provided a range of solutions to our clients for over 35 years.
+          <p className='text-[#595853]'>From pioneering products to leading designs, Dataracks has provided a range of solutions to our clients for over 35 years.
             <br /> <br />
             We introduced the industry’s first purpose-built data racks in 1989. Then, we rewrote the book on data centre cooling and efficiency in 2007 with  our cold aisle containment solutions.
             <br /> <br />
@@ -71,7 +71,7 @@ const about = () => {
         <div className='grid md:grid-cols-2 gap-10'>
           <div>
             <p className='md:text-5xl text-3xl font-light mb-4'>Quality Products and Services</p>
-            <p>Our range of products is extensive and we tailor every project to the needs of our clients.  We’ve provided solutions for the likes of Microsoft, EE, and Vodafone.
+            <p className='text-[#595853]'>Our range of products is extensive and we tailor every project to the needs of our clients.  We’ve provided solutions for the likes of Microsoft, EE, and Vodafone.
               <br /> <br />
               From advanced cooling systems to optimized cable management, our latest  innovations are engineered to meet the evolving demands of the data  centre and telecommunications sectors. Each product is designed and  manufactured in our UK facility, ensuring the highest standards of  quality and precision.
               <br /> <br />
@@ -85,7 +85,7 @@ const about = () => {
         <div className='grid md:grid-cols-2 gap-10'>
           <div>
             <p className='md:text-5xl text-3xl font-light mb-4'>Green Credentials</p>
-            <p>From our UK factory to your data centre, our eco-credentials run across everything we do at Dataracks.
+            <p className='text-[#595853]'>From our UK factory to your data centre, our eco-credentials run across everything we do at Dataracks.
               <br /> <br />
               We won the Ethical/Green Business of the Year 2018 FSB award for the East  of England and were a UK finalist for the same award thanks to our  commitment to minimising resource consumption at our factory and using  sustainable materials in our products.
               <br /> <br />

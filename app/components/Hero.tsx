@@ -1,7 +1,7 @@
 const Hero = ({ image, title }: { image?: string; title?: string }) => {
     return (!title ?
         <section className="bg-[#B5B7D2] text-white relative">
-            <video autoPlay muted loop className="h-[80vh] w-full object-cover">
+            <video autoPlay muted loop className="h-[100vh] w-full object-cover">
                 <source src="/images/dataracks-video_091236.mp4" />
             </video>
             <div className="absolute inset-0 bg-[#0F07654D]"></div>
@@ -17,7 +17,7 @@ const Hero = ({ image, title }: { image?: string; title?: string }) => {
             <div className="absolute inset-0 bg-[#0F07654D]"></div>
 
             <div className="relative max-w-7xl mx-auto md:py-68 py-40 md:px-6">
-                <h1 className="text-4xl md:text-5xl w-1/2 mx-auto leading-snug  text-center text-white">
+                <h1 className="text-4xl md:text-5xl w-1/2 mx-auto leading-snug text-center text-white">
                     {title}
                 </h1>
             </div>

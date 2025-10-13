@@ -42,7 +42,7 @@ const SecurityCages = () => {
     return (
         <>
             <Hero title="Security Cages" image='/images/dataracks-security-cages-header.jpg' />
-            <section className='max-w-7xl mx-auto px-4 py-20'>
+            <section className='max-w-7xl mx-auto px-4 py-32'>
                 <div className='grid md:grid-cols-2 gap-10'>
                     <div><p className='md:text-5xl text-3xl font-light'>Customisable Security Cages designed for IT equipment maximum protection </p></div>
                     <div className='text-[#595853]'>
@@ -52,7 +52,7 @@ const SecurityCages = () => {
                             Each cage is constructed with durability, security, and performance in mind, featuring:
                             <br /> <br />
 
-                            <ul className='list-disc list-inside space-y-3'>
+                            <ul className='list-disc ml-4 space-y-3'>
                                 <li>Robust steel frames and panels</li>
                                 <li>Modular designs for easy assembly and scalability</li>
                                 <li>Various door types, including sliding and hinged options with auto-locking mechanisms</li>
@@ -67,11 +67,12 @@ const SecurityCages = () => {
                 <Swiper
                     spaceBetween={20}
                     slidesPerView={1.5}
-                    autoplay={{
-                        delay: 4000, // 4 seconds between slides
-                        disableOnInteraction: false, // keeps autoplay even when user interacts
-                    }}
-                    modules={[Autoplay]} // ✅ include Autoplay
+                    draggable
+                    // autoplay={{
+                    //     delay: 4000, // 4 seconds between slides
+                    //     disableOnInteraction: false, // keeps autoplay even when user interacts
+                    // }}
+                    // modules={[Autoplay]} // ✅ include Autoplay
                     loop={true}
                 >
                     {[1, 2, 3].map(index => <SwiperSlide>
@@ -82,7 +83,7 @@ const SecurityCages = () => {
             <section className='mb-20 grid md:grid-cols-2 '>
                 <div className='bg-[#EAF4FF] md:px-24 md:py-24 px-4 py-10'>
                     <p className='text-md:5xl text-3xl font-light'>Key Features</p>
-                    <ul className='text-[#595853] mt-4 list-disc list-inside space-y-3'>
+                    <ul className='text-[#595853] mt-4 list-disc space-y-3 ml-4'>
                         <li>Solid Steel Construction: Built from high-grade materials, our cages include reinforced panels, steel bolts, and tamper-resistant fastenings.</li>
                         <li>Customised Design: Tailor your security cages to fit your facility’s layout, size, and access requirements.</li>
                         <li>Secure Doors: Choose from sliding, hinged, or automatic doors with advanced locking mechanisms.</li>
@@ -94,7 +95,7 @@ const SecurityCages = () => {
                 <div className='bg-[#F5F5F5] md:px-24 md:py-24 px-4 pt-10'>
                     <p className='text-md:5xl text-3xl font-light'>Installation & Support</p>
                     <p className='my-4 text-[#595853]'>Our dedicated team provides a seamless installation experience with full support throughout the process:</p>
-                    <ul className='text-[#595853] space-y-3 mt-4 list-disc list-inside'>
+                    <ul className='text-[#595853] space-y-3 mt-4 list-disc ml-4'>
                         <li>Consultation: Work with our experts to design a solution that meets your specific security and operational needs.</li>
                         <li>Manufacturing: All cages are manufactured in the UK to ensure quality and compliance with safety standards.</li>
                         <li>Installation: Professionally installed by experienced technicians with minimal disruption to operations.</li>

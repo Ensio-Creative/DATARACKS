@@ -16,7 +16,7 @@ const contact = () => {
         <>
             <Hero title="Contact Us" image='/images/dataracks-contact-us-header.jpg' />
 
-            <section className='max-w-7xl mx-auto px-4 py-20'>
+            <section className='max-w-7xl mx-auto px-4 py-[120px]'>
                 <div className='grid md:grid-cols-2 gap-10'>
                     <div>
                         <p className='md:text-5xl text-3xl font-light mb-4'>General inquiries</p>

@@ -46,7 +46,7 @@ const ServerCabinets = () => {
                     We offer a wide range of colocation/split cabinets, including:
                     <br /> <br />
                 </p>
-                <ul className='list-disc list-inside'>
+                <ul className='list-disc ml-4'>
                     <li>2, 3 and 4 part split options available as standard.</li>
                     <li>Standard heights – 42U and 48U</li>
                     <li>Two widths – 600mm and 800mm</li>
@@ -78,7 +78,7 @@ const ServerCabinets = () => {
                     <br /> <br />
                     Features include:
                     <br /> <br />
-                    <ul className='list-disc list-inside'>
+                    <ul className='list-disc ml-4'>
                         <li>Heights – 42U & 48U</li>
                         <li>Dimensions – 1000mm wide x 1000mm deep; 1000mm wide x 500mm deep</li>
                         <li>Weight loading tested up to 1500kg (evenly distributed)</li>
@@ -116,7 +116,7 @@ const ServerCabinets = () => {
                     <br /> <br />
                     Our Micro Data Centres deliver a cost-effective and scalable solution for diverse environments, including:
                     <br /> <br />
-                    <ul className='list-disc list-inside'>
+                    <ul className='list-disc ml-4'>
                         <li>Offices</li>
                         <li>Hospitals and GP surgeries</li>
                         <li>Retail spaces</li>
@@ -128,7 +128,7 @@ const ServerCabinets = () => {
                     Each MDC is environmentally independent, requiring no external cooling  infrastructure. Its compact design ensures seamless integration into any space, offering both convenience and performance.
                 </p>
                 <p className='my-6 text-[#0F0765] text-xl'>Key Benefits</p>
-                <ul className='list-disc list-inside'>
+                <ul className='list-disc ml-4'>
                     <li>Reduced Costs: Save on infrastructure with a compact, self-contained design.</li>
                     <li>Futureproof: Scale your MDC to meet evolving IT needs.</li>
                     <li>Fast Deployment: Quick to install and commission, enabling rapid deployment.</li>
@@ -137,7 +137,7 @@ const ServerCabinets = () => {
                     <li>Environmentally Friendly: Minimal environmental impact and low operational costs.</li>
                 </ul>
                 <p className='my-6 text-[#0F0765] text-xl'>Standard MDC Features</p>
-                <ul className='list-disc list-inside'>
+                <ul className='list-disc ml-4'>
                     <li>Pre-assembled 19” rack cabinet modules for IT equipment</li>
                     <li>10-25 kW N+1 cooling systems</li>
                     <li>Integral dual-feed UPS (Uninterruptible Power Supply)</li>
@@ -149,7 +149,7 @@ const ServerCabinets = () => {
                 <p className='my-6 text-[#0F0765] text-xl'>Advanced Installation and Support</p>
                 <p>Our team of experts ensures seamless installation and commissioning of your Micro Data Centre:
                     <br />
-                    <ul className='list-disc list-inside'>
+                    <ul className='list-disc ml-4'>
                         <li>
                             Consultation: Tailored designs based on your unique operational needs.
                         </li>
@@ -171,7 +171,7 @@ const ServerCabinets = () => {
                         <br /> <br />
                         Fully compliant with the EN 300 119-3 specifications, our highly versatile ETSI cabinets are available in the following sizes:
                         <br /> <br />
-                        <ul className='list-disc list-inside'>
+                        <ul className='list-disc ml-4'>
                             <li>45U standard: 600mm wide x 300mm deep x 2200mm height.</li>
                             <li>45U double depth: 600mm wide x 600mm deep x 2200mm height.</li>
                             <li> Other sizes are also available.</li>
@@ -180,7 +180,7 @@ const ServerCabinets = () => {
                         Whether you need your ETSI cabinets to work with your existing facility or in a new facility, our expert team are available to discuss your  installation.
                         <br /><br />
                         <strong>Features</strong> <br /> <br />
-                        <ul className='list-disc list-inside'>
+                        <ul className='list-disc ml-4'>
                             <li>UK-built to the highest standards.</li>
                             <li>Compliant with EN 300 119-3 specifications.</li>
                             <li>2 x ETSI mounting angles, drop in, removable side, rear panels and roof with optional front door.</li>
@@ -200,7 +200,7 @@ const ServerCabinets = () => {
                         <br /> <br />
                         So, the features include:
                         <br /> <br />
-                        <ul className='list-disc list-inside'>
+                        <ul className='list-disc ml-4'>
                             <li>Available in 12U and 18U heights</li>
                             <li>600mm x 600mm frame size</li>
                             <li> Fully adjustable 19” mounting angles fitted front and rear</li>
@@ -217,13 +217,13 @@ const ServerCabinets = () => {
     return (
         <>
             <Hero title="Server Cabinets" image='/images/dataracks-server-cabinets-header.jpg' />
-            <section className='max-w-7xl mx-auto px-4 py-20'>
+            <section className='max-w-7xl mx-auto px-4 py-32'>
                 <div className='grid md:grid-cols-3 gap-6'>
                     {serverData.map((item, index) => (
                         <div key={index} className='cursor-pointer' onClick={() => { setSelectedItem(item), setShow(true) }}>
                             <img src={item.image} alt={item.title} className='w-full object-cover' />
                             <div className='p-4'>
-                                <h2 className='text-lg font-semibold mb-2'>{item.title}</h2>
+                                <h3 className='text-lg mb-2'>{item.title}</h3>
                             </div>
                         </div>
                     ))}

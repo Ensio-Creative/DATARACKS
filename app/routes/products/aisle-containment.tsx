@@ -28,7 +28,7 @@ const AisleContainment = () => {
                     </p>
                     <img src="/images/aisle-containment/dataracks-cold-aisle-containment-1.jpg" className='w-full my-6' alt="" />
                     <p className='my-6 text-[#0F0765] text-xl'>Key Benefits</p>
-                    <ul className='list-disc list-inside'>
+                    <ul className='list-disc ml-4'>
                         <li>Cold Aisle Containment Doors: Sliding or hinged options for effective aisle sealing and ease of access.</li>
                         <li>Curtains and Panels: Flexible or rigid barriers designed to fit various configurations while maintaining durability.</li>
                         <li>Roof Panels: Transparent or opaque panels that provide complete containment and allow for integration with fire suppression systems.</li>
@@ -36,7 +36,7 @@ const AisleContainment = () => {
                         <li>Durability and Safety: High-quality materials, including fire-resistant options, ensure long-term performance and compliance with safety standards.</li>
                     </ul>
                     <p className='my-6 text-[#0F0765] text-xl'>Benefits of cold aisle containment</p>
-                    <ul className='list-disc list-inside'>
+                    <ul className='list-disc ml-4'>
                         <li>Energy Efficiency: Reduce cooling costs by up to 30% with precision airflow management, lowering operational expenses.</li>
                         <li>Improved Uptime: Maintain consistent inlet temperatures to protect equipment and minimise the risk of overheating or downtime.</li>
                         <li>Hot Spot Elimination: Address uneven cooling distribution to prevent equipment failure and optimise rack performance.</li>
@@ -76,7 +76,7 @@ const AisleContainment = () => {
                         <br /> <br />
                         Hot aisle containment (HAC) ensures the controlled flow of hot air back to the CRAC units. Dataracks offer two versions of HAC – ceiling plenum or rack chimneys. Features include:
                         <br /><br />
-                        <ul className='list-disc list-inside'>
+                        <ul className='list-disc ml-4'>
                             <li> Floor construction or air flow under voids</li>
                             <li>Ceiling construction and accessibility</li>
                             <li>Suitable for
@@ -130,7 +130,7 @@ const AisleContainment = () => {
     return (
         <>
             <Hero title="Aisle Containment" image='/images/dataracks-aisle-header.jpg' />
-            <section className='max-w-7xl mx-auto px-4 py-20'>
+            <section className='max-w-7xl mx-auto px-4 py-32'>
                 <div className='grid md:grid-cols-2 gap-10'>
                     <div><p className='md:text-5xl text-3xl font-light'>Maximize uptime & efficiency with custom Aisle Containment solutions</p></div>
                     <div className='text-[#595853]'>
@@ -138,7 +138,7 @@ const AisleContainment = () => {
                             <br /> <br />
                             Our custom-built solutions are designed to:
                             <br /> <br />
-                            <ul className='list-disc list-inside'>
+                            <ul className='list-disc ml-4'>
                                 <li>Reduce energy usage and cooling costs.</li>
                                 <li>Eliminate hot spots and optimise airflow.</li>
                                 <li>Improve Power Usage Effectiveness (PUE)</li>
