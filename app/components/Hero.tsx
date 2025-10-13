@@ -1,7 +1,11 @@
 const Hero = ({ image, title }: { image?: string; title?: string }) => {
     return (!title ?
-        <section className="bg-[#B5B7D2] text-white">
-            <div className="max-w-7xl mx-auto md:flex justify-between pt-80 pb-20 px-6">
+        <section className="bg-[#B5B7D2] text-white relative">
+            <video autoPlay muted loop className="h-[80vh] w-full object-cover">
+                <source src="/images/dataracks-video_091236.mp4" />
+            </video>
+            <div className="absolute inset-0 bg-[#0F07654D]"></div>
+            <div className="max-w-7xl absolute top-0 mx-auto md:flex justify-between pt-96 pb-20 px-6">
                 <h1 className="text-4xl md:text-5xl md:w-1/2 leading-snug">
                     Precision-Engineered Data Centre Solutions, Built in the UK
                 </h1>
