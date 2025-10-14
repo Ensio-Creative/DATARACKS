@@ -95,7 +95,7 @@ const about = () => {
         </div>
       </section>
 
-      <section className='bg-[#EAF4FF]'>
+      {/* <section className='bg-[#EAF4FF]'>
         <div className='max-w-7xl mx-auto px-4 py-20'>
           <p className='md:text-5xl text-3xl font-light text-center'>Meet Our Team</p>
 
@@ -111,7 +111,7 @@ const about = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className='max-w-7xl mx-auto px-4 py-20'>
         <div className='grid md:grid-cols-2 md:gap-10 gap-4'>
