@@ -3,11 +3,11 @@ import Hero from '~/components/Hero';
 import type { Route } from './+types/about';
 
 export function meta({ }: Route.MetaArgs) {
-    return [
-        {
-            title: "About Us | Dataracks"
-        },
-    ];
+  return [
+    {
+      title: "About Us | Dataracks"
+    },
+  ];
 }
 
 
@@ -80,9 +80,10 @@ const about = () => {
           <img src="/images/dataracks-quality-products.jpg" alt="" />
         </div>
       </section>
-      <div className='border-t border-t-[#CFCFCF] max-w-7xl mx-auto'></div>
-      <section className='max-w-7xl mx-auto px-4 py-20'>
-        <div className='grid md:grid-cols-2 gap-10'>
+      {/* <div className='border-t border-t-[#CFCFCF] max-w-7xl mx-auto'></div> */}
+      {/* <section className=' px-4 py-20 bg-[#EAF4FF]'>
+        <div className='max-w-7xl mx-auto grid md:grid-cols-2 gap-10'>
+          <img src="/images/dataracks-green-credentials.jpg" alt="" />
           <div>
             <p className='md:text-5xl text-3xl font-light mb-4'>Green Credentials</p>
             <p className='text-[#595853]'>From our UK factory to your data centre, our eco-credentials run across everything we do at Dataracks.
@@ -91,9 +92,29 @@ const about = () => {
               <br /> <br />
               We’re a leading data centre and telecoms manufacturer with high environmental ambitions and hope to be carbon neutral in the next three years.</p>
           </div>
-          <img src="/images/dataracks-green-credentials.jpg" alt="" />
         </div>
+      </section> */}
+
+      <section className="bg-[#EAF4FF] py-20">
+        <div className=" max-w-7xl mx-auto px-4 md:flex">
+          <img
+            src="/images/dataracks-green-credentials.jpg"
+            alt="Data centre"
+            className="md:w-[48%] object-cover md:h-[492px] md:-mr-20 z-10"
+          />
+          <div className="md:bg-white ml-auto md:pr-20 md:pl-32 md:py-20 py-10 max-w-3xl text-left md:mt-18 md:h-[60%]">
+            <h3 className="text-4xl font-light mb-4">Green Credentials</h3>
+            <p className='text-[#595853]'>From our UK factory to your data centre, our eco-credentials run across everything we do at Dataracks.
+              <br /> <br />
+              We won the Ethical/Green Business of the Year 2018 FSB award for the East  of England and were a UK finalist for the same award thanks to our  commitment to minimising resource consumption at our factory and using  sustainable materials in our products.
+              <br /> <br />
+              We’re a leading data centre and telecoms manufacturer with high environmental ambitions and hope to be carbon neutral in the next three years.</p>
+          </div>
+        </div>
+
       </section>
+
+      
 
       {/* <section className='bg-[#EAF4FF]'>
         <div className='max-w-7xl mx-auto px-4 py-20'>
