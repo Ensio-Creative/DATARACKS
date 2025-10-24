@@ -61,7 +61,7 @@ const HeaderNav = () => {
                                         <p className="text-3xl">Solutions</p>
                                     </div>
                                     <div className="grid grid-cols-3 gap-4">
-                                        {solutions.map((single, index) => <div key={index} className="py-4 border-b border-[#CFCFCF]">{single}</div>)}
+                                        {solutions.map((single, index) => <div key={index + single} className="py-4 border-b border-[#CFCFCF]">{single}</div>)}
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +97,7 @@ const HeaderNav = () => {
                                         <p className="text-3xl">Products</p>
                                     </div>
                                     <div className="grid grid-cols-3 gap-4">
-                                        {products.map((single, index) => <div key={index} className="py-4 border-b border-[#CFCFCF]">{single}</div>)}
+                                        {products.map((single, index) => <div key={index + single} className="py-4 border-b border-[#CFCFCF]">{single}</div>)}
                                     </div>
                                 </div>
                             </div>
@@ -145,6 +145,32 @@ const HeaderNav = () => {
                             </li>
 
                             <li className="text-2xl font-light border-b border-gray-200 pb-2">
+
+                                <details open={isSolutionsOpen} onToggle={() => setIsSolutionssOpen(!isSolutionsOpen)}>
+                                    <summary className="flex justify-between items-center cursor-pointer">
+                                        <span>
+                                            <p>
+                                                Solutions
+                                            </p>
+                                        </span>
+                                        <span className="text-3xl">{isSolutionsOpen ? "−" : "+"}</span>
+                                    </summary>
+                                    <ul className="mt-3 space-y-3 text-base">
+                                        {solutions.map((single) => <li>
+                                            <Link to={''}>{single}</Link>
+                                        </li>
+                                        )}
+
+                                    </ul>
+                                </details>
+                            </li>
+                            <li className="text-2xl font-light border-b border-gray-200 pb-2">
+                                <Link to="/services" onClick={() => setMenuOpen(false)}>
+                                    Services
+                                </Link>
+                            </li>
+
+                            <li className="text-2xl font-light border-b border-gray-200 pb-2">
                                 <details open={isProductsOpen} onToggle={() => setIsProductsOpen(!isProductsOpen)}>
                                     <summary className="flex justify-between items-center cursor-pointer">
                                         <span>
@@ -154,22 +180,12 @@ const HeaderNav = () => {
                                         </span>
                                         <span className="text-3xl">{isProductsOpen ? "−" : "+"}</span>
                                     </summary>
-                                    <ul className="ml-6 mt-3 space-y-3 text-base">
-                                        <li>
-                                            <Link to="/products/server-cabinets" onClick={() => setMenuOpen(false)}>
-                                                Server Cabinets
-                                            </Link>
+                                    <ul className="mt-3 space-y-3 text-base">
+                                        {products.map((single) => <li>
+                                            <Link to={''}>{single}</Link>
                                         </li>
-                                        <li>
-                                            <Link to="/products/aisle-containment" onClick={() => setMenuOpen(false)}>
-                                                Aisle Containment
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/products/security-cages" onClick={() => setMenuOpen(false)}>
-                                                Security Cages
-                                            </Link>
-                                        </li>
+                                        )}
+
                                     </ul>
                                 </details>
                             </li>

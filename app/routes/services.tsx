@@ -37,8 +37,8 @@ const services = () => {
         <>
             <Hero title="Services" image='/images/dataracks-products-header.jpg' />
 
-            <section className='max-w-7xl mx-auto my-20'>
-                {allServices.map((single, index) => <div key={index} className="grid md:grid-cols-3 md:gap-20 gap-4 border-b last:border-b-0 border-[#CFCFCF] py-10">
+            <section className='max-w-7xl mx-auto px-4 my-20'>
+                {allServices.map((single, index) => <div key={index + single.title} className="grid md:grid-cols-3 md:gap-20 gap-4 border-b last:border-b-0 border-[#CFCFCF] py-10">
                     <div>
                         <p className='text-3xl font-light'>{single.title}</p>
                     </div>

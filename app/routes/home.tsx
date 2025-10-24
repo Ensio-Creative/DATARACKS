@@ -8,7 +8,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Link } from "react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MoveRight } from "lucide-react";
 import Marquee from "react-fast-marquee";
 
 
@@ -19,6 +19,41 @@ export function meta({ }: Route.MetaArgs) {
     },
   ];
 }
+
+export const solutions = [
+  {
+    title: "OEM & Contract Manufacture",
+    image: "dataracks-oem-contract-&-manufacture.jpg"
+  },
+  {
+    title: "Rail Solutions",
+    image: "dataracks-rail-solutions.jpg"
+  },
+  {
+    title: "Road Solutions",
+    image: "dataracks-road-solutions.jpg"
+  },
+  {
+    title: "Energy Solutions",
+    image: "dataracks-energy-solutions.jpg"
+  },
+  {
+    title: "Data Centre Solutions",
+    image: "dataracks-data-centre-solutions.jpg"
+  },
+  {
+    title: "Fixed Telecom Solutions",
+    image: "dataracks-fixed-telecom-solutions.jpg"
+  },
+  {
+    title: "Mobile Telecom Solutions",
+    image: "dataracks-mobile-telecom-solutions.jpg"
+  },
+  {
+    title: "Defense Solutions",
+    image: "dataracks-defense-solutions.jpg"
+  }
+]
 
 export default function Home() {
 
@@ -65,6 +100,25 @@ export default function Home() {
     <section className="max-w-7xl mx-auto py-20 p-4">
       <h3 className="text-4xl font-light mb-4">Our Solutions</h3>
 
+      <div className="grid md:grid-cols-6 gap-4">
+        {solutions.map((single, index) => (
+          <div
+            key={index}
+            className={`relative ${index === 3 || index === 4 ? "col-span-3" : "md:col-span-2 col-span-3"
+              }`}
+          >
+            <img
+              src={`/images/solutions/${single.image}`}
+              alt={single.title}
+              className="w-full h-full object-cover"
+            />
+            <div className="flex absolute justify-between w-full right-0 left-0 bottom-0 p-4 text-white">
+              <p className="text-xl w-1/2">{single.title}</p>
+              <MoveRight />
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
 
     <section className="bg-[#F5F5F5] py-20">
