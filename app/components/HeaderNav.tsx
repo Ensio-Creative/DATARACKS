@@ -47,7 +47,7 @@ const HeaderNav = () => {
                         </Link>
                     </button>
 
-                    <Link to="/" className="hover:text-primary transition">
+                    <Link to="/services" className="hover:text-primary transition">
                         Services
                     </Link>
 
