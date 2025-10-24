@@ -5,7 +5,7 @@ const Hero = ({ image, title }: { image?: string; title?: string }) => {
                 <source src="/images/dataracks-video_091236.mp4" />
             </video>
             <div className="absolute inset-0 bg-[#0F07654D]"></div>
-            <div className="max-w-7xl absolute top-0 mx-auto md:flex justify-between pt-96 pb-20 px-6">
+            <div className="max-w-7xl absolute top-0 left-0 right-0 mx-auto md:flex justify-between pt-96 pb-20 px-6">
                 <h1 className="text-4xl md:text-5xl md:w-1/2 leading-snug">
                     Precision-Engineered Data Centre Solutions, Built in the UK
                 </h1>

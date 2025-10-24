@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '~/components/Hero';
 import type { Route } from './+types/contact';
+import { ArrowUpRight } from 'lucide-react';
 
 export function meta({ }: Route.MetaArgs) {
     return [
@@ -32,6 +33,14 @@ const contact = () => {
                                 <p>T: +44(0)1954 232020</p>
                                 <p>E: sales@dataracks.co.uk</p>
                             </div>
+                        </div>
+
+                        <div className='border-b border-b-[#CFCFCF] flex gap-4'>
+                            <p className='text-[#0F0765] text-xl py-6'>
+                                Click to view our manufacturing factory
+                            </p>
+
+                            <ArrowUpRight className='my-auto' />
                         </div>
 
                         <div className='mt-6'>

@@ -39,6 +39,18 @@ const HeaderNav = () => {
                         Home
                     </Link>
 
+                    <button className="hover:text-primary transition flex items-center space-x-1">
+                        <Link to="/products" className="flex gap-1">
+                            <span>Solutions</span>
+                            <img src="/images/arrow.svg" className={`${isProductsOpen ? 'rotate-180' : ""}`} alt="" />
+                            {/* <span className="text-sm"> {isProductsOpen ?  : "▼"} </span> */}
+                        </Link>
+                    </button>
+
+                    <Link to="/" className="hover:text-primary transition">
+                        Services
+                    </Link>
+
                     {/* Products Dropdown */}
                     <div
                         className=" group"

@@ -45,11 +45,11 @@ export default function Home() {
   return <>
     <Hero />
 
-    <section className="max-w-5xl mx-auto my-32 px-4">
+    {/* <section className="max-w-5xl mx-auto my-32 px-4">
       <h1 className="md:text-5xl text-3xl font-light text-center">From server cabinets to aisle containment and security cages, Dataracks designs and manufactures complete data centre solutions engineered for performance, efficiency, and sustainability.</h1>
-    </section>
+    </section> */}
 
-    <section className="bg-[#EAF4FF] py-20">
+    <section className="bg-[#F5F5F5] py-20">
       <div className="relative">
         <img
           src="/images/dataracks-story.jpg"
@@ -67,7 +67,7 @@ export default function Home() {
 
     </section>
 
-    <section className="max-w-7xl mx-auto py-20 px-4">
+    {/* <section className="max-w-7xl mx-auto py-20 px-4">
       <h3 className="md:text-4xl text-3xl mb-10 font-light">Our Products</h3>
       <div className="md:grid md:grid-cols-2 gap-6">
         {products.map((p, index) => (
@@ -81,9 +81,9 @@ export default function Home() {
           </div>
         ))}
       </div>
-    </section>
+    </section> */}
 
-    <section className="max-w-7xl mx-auto md:pt-20 pb-20 px-4">
+    {/* <section className="max-w-7xl mx-auto md:pt-20 pb-20 px-4">
       <h3 className="md:text-4xl text-3xl mb-10 font-light">Our Sectors</h3>
       <div className="grid md:grid-cols-3 gap-6">
         {sectors.map((p, index) => (
@@ -95,17 +95,17 @@ export default function Home() {
           </div>
         ))}
       </div>
-    </section>
+    </section> */}
 
     <section id="testimonials" className="relative mt-20 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/dataracks-cold-aisle-containment-1.jpg')" }}>
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#0F07654D]"></div>
+      <div className="absolute inset-0 bg-[#0F0765CC]"></div>
 
       {/* Content */}
       <div className="relative max-w-xl mx-auto text-center py-32 text-white">
         <h1 className="text-4xl font-light">
-          Don’t Just Take <br />
-          Our Word For It
+          Don’t Just Take
+          Our <br /> Word For It
         </h1>
         <p>Read what our clients have to say.</p>
 
