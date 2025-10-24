@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '~/components/Hero';
 import type { Route } from './+types/about';
+import Marquee from "react-fast-marquee";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -37,34 +38,42 @@ const about = () => {
   return (
     <>
       <Hero title="About Us" image='/images/about-img.jpg' />
-      <div className='grid md:grid-cols-2 gap-4 max-w-7xl mx-auto px-4 py-[120px]'>
-        <div>
-          <p className='md:text-5xl text-3xl font-light'>Data centre and telecom solutions manufacturer</p>
-        </div>
-        <div>
+      <div className='flex'>
+        <div className='p-32 w-1/2'>
+          <p className='md:text-5xl text-3xl font-light'>About Dataracks</p>
+
           <p className='text-[#595853]'>From pioneering products to leading designs, Dataracks has provided a range of solutions to our clients for over 35 years.
             <br /> <br />
             We introduced the industry’s first purpose-built data racks in 1989. Then, we rewrote the book on data centre cooling and efficiency in 2007 with  our cold aisle containment solutions.
             <br /> <br />
             We’re immensely proud of our achievements in the industry and continue to  innovate, setting new standards in data centre solutions.</p>
-          <div className='grid grid-cols-3 gap-10 mt-6'>
-            <div className='border-t border-t-[#0F0765] py-4'>
-              <p className='text-3xl font-light'>35+</p>
-              <p className='text-xs'>Years of experience</p>
+        </div>
+        <div className='w-1/2 bg-[#F5F5F5] p-20'>
+          <div className='flex flex-col gap-8'>
+            <div className=' py-4'>
+              <p className='text-7xl font-light'>35+</p>
+              <p className='text-xs text-[#595853]'>Years of experience</p>
             </div>
             <div className='border-t border-t-[#0F0765] py-4'>
-              <p className='text-3xl font-light'>1000+</p>
-              <p className='text-xs'>Clients</p>
+              <p className='text-7xl font-light'>1000+</p>
+              <p className='text-xs text-[#595853]'>Clients</p>
             </div>
             <div className='border-t border-t-[#0F0765] py-4'>
-              <p className='text-3xl font-light'>12</p>
-              <p className='text-xs'>Industry awards</p>
+              <p className='text-7xl font-light'>12</p>
+              <p className='text-xs text-[#595853]'>Industry awards</p>
             </div>
           </div>
         </div>
       </div>
-      <div>
-        <img src="/images/dataracks-about.jpg" alt="" />
+      <div className='relative py-40 my-32'>
+        <img className='max-w-5xl left-0 right-0 mx-auto absolute top-0 bottom-0 my-auto z-10' src="/images/dataracks-about.jpg" alt="" />
+
+        <Marquee>
+          <p className='md:text-8xl text-4xl font-light'>Data centre and telecom solutions - Data centre and telecom solutions</p>
+        </Marquee>
+        <Marquee direction='right'>
+          <p className='md:text-8xl text-4xl font-light'>Data centre and telecom solutions - Data centre and telecom solutions</p>
+        </Marquee>
       </div>
 
       <section className='max-w-7xl mx-auto px-4 py-20'>
@@ -95,7 +104,7 @@ const about = () => {
         </div>
       </section> */}
 
-      <section className="bg-[#EAF4FF] py-20">
+      <section className="bg-[#F5F5F5] py-20">
         <div className=" max-w-7xl mx-auto px-4 md:flex">
           <img
             src="/images/dataracks-green-credentials.jpg"
@@ -114,7 +123,7 @@ const about = () => {
 
       </section>
 
-      
+
 
       {/* <section className='bg-[#EAF4FF]'>
         <div className='max-w-7xl mx-auto px-4 py-20'>
