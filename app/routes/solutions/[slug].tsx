@@ -62,7 +62,7 @@ export default function ProductDetail() {
                     className="w-full md:h-[550px] object-cover"
                 />
             </div>
-            <div className="max-w-5xl mx-auto px-4 mt-20">
+            <div className="max-w-5xl mx-auto px-4 my-20">
                 <div className="text-lg text-gray-700 leading-relaxed">
                     {solution.content || (
                         <p className="text-gray-600">

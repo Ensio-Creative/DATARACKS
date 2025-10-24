@@ -12,7 +12,7 @@ const FooterNav = () => (
             <div>
                 <h4 className=" mb-3 text-[#595853]">Solutions</h4>
                 <ul className="space-y-3 ">
-                    {solutions.map((siglee, index) => <li><Link to={`/solutions/${stringToSlug(siglee.title)}`}>{siglee.title}</Link></li>)}
+                    {solutions.map((siglee, index) => <li key={siglee.title + index}><Link to={`/solutions/${stringToSlug(siglee.title)}`}>{siglee.title}</Link></li>)}
 
                 </ul>
             </div>
@@ -20,7 +20,7 @@ const FooterNav = () => (
             <div>
                 <h4 className=" mb-3 text-[#595853]">Products</h4>
                 <ul className="space-y-3">
-                    {allProducts.map((single, index) => <li><Link to={`/products${single.slug}`}>{single.title}</Link></li>)}
+                    {allProducts.map((single, index) => <li key={single.title + index}><Link to={`/products${single.slug}`}>{single.title}</Link></li>)}
                 </ul>
             </div>
             <div>

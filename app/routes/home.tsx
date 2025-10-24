@@ -63,11 +63,15 @@ export const solutions = [
         </p>
         <div className='md:flex gap-4 my-6 text-center'>
           <div>
-            <img src="/images/dataracks-rail-solutions/dataracks-cabinet-commsafe1.jpg" alt="" className='w-full' />
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/dataracks-rail-solutions/dataracks-cabinet-commsafe1.jpg" alt="" className='w-full' />
+            </div>
             <p className="my-3">COMMSAFE™</p>
           </div>
           <div>
-            <img src="/images/dataracks-rail-solutions/dataracks-cabinet-tracksafe1.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/dataracks-rail-solutions/dataracks-cabinet-tracksafe1.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            </div>
             <p className="my-3">TRACKSAFE™</p>
           </div>
         </div>
@@ -92,11 +96,15 @@ export const solutions = [
         </p>
         <div className='md:flex gap-4 my-6 text-center'>
           <div>
-            <img src="/images/dataracks-rail-solutions/dataracks-roadside-cabinets.jpg" alt="" className='w-full' />
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/dataracks-rail-solutions/dataracks-roadside-cabinets.jpg" alt="" className='w-full' />
+            </div>
             <p className="my-3">Road Cabinets</p>
           </div>
           <div>
-            <img src="/images/dataracks-rail-solutions/dataracks-ev-charging-enclosures.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/dataracks-rail-solutions/dataracks-ev-charging-enclosures.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            </div>
             <p className="my-3">EV Charging Enclosures</p>
           </div>
         </div>
@@ -105,7 +113,69 @@ export const solutions = [
   },
   {
     title: "Energy Solutions",
-    image: "dataracks-energy-solutions.jpg"
+    image: "dataracks-energy-solutions.jpg",
+    content: (
+      <div>
+        <p className='my-6 text-[#0F0765] text-3xl font-light'>Enclosure Solutions for the Energy Sector</p>
+        <p>
+          We design and manufacture high-performance energy enclosures engineered to ensure the safe, reliable, and efficient operation of modern power and energy infrastructure. Our solutions protect critical electrical equipment, control systems, and sensitive components used in power generation, distribution, storage, and renewable energy applications.
+          <br /> <br />
+          Our energy enclosure designs are developed with the needs of energy providers, utilities, and renewable power operators in mind—offering easy access to batteries and components, simplified maintenance, and robust protection against environmental challenges such as temperature extremes, dust, moisture, and mechanical impact.
+          <br /> <br />
+
+          Dataracks offers a comprehensive range of energy infrastructure enclosures, including:
+          <br /> <br />
+        </p>
+        <ul className='list-disc ml-4'>
+          <li>Marshalling kiosks and remote interface kiosks</li>
+          <li> UPS enclosures and battery storage cabinets</li>
+          <li>Outdoor electrical enclosures for EV and FCEV charging systems</li>
+          <li> EV charging feeder pillars</li>
+          <li>Hydrogen power and fuel cell enclosures</li>
+          <li> CCTV, utility, and monitoring enclosures</li>
+        </ul>
+        <br /> <br />
+
+        <p>
+          Each enclosure is engineered and manufactured in the UK to meet stringent industry and safety standards, providing long- term durability, thermal stability, and ingress protection in demanding outdoor or onshore environments.
+          < br /> <br />
+
+          Our commitment to innovation, compliance, and quality manufacturing makes Dataracks a trusted partner for energy network operators, OEMs, and infrastructure providers seeking dependable, scalable, and sustainable enclosure solutions.
+        </p>
+        <div className='grid md:grid-cols-2 md:gap-20 gap-4 my-6 text-center'>
+          <div>
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/emergy-solutions/dataracks-AMI1.jpg" alt="" className='' />
+            </div>
+            <p className="my-3">AMI Smart Grid Cabinets</p>
+          </div>
+          <div>
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/emergy-solutions/energy-storage.jpg" alt="" />
+            </div>
+            <p className="my-3">Energy Storage Enclosure</p>
+          </div>
+          <div>
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/emergy-solutions/dataracks-hydrogen-battery-enclosure.jpg" alt="" className='' />
+            </div>
+            <p className="my-3">Hydrogen Battery Enclosure </p>
+          </div>
+          <div>
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/emergy-solutions/dataracks-marshalling-kiosk.jpg" alt="" className='' />
+            </div>
+            <p className="my-3">Marshal Kiosk </p>
+          </div>
+          <div>
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/emergy-solutions/dataracks-renewable-energy-enclosures1.jpg" alt="" className='' />
+            </div>
+            <p className="my-3">Renewable Energy Enclosures </p>
+          </div>
+        </div>
+      </div >
+    )
   },
   {
     title: "Data Centre Solutions",
@@ -126,11 +196,15 @@ export const solutions = [
         </p>
         <div className='md:flex gap-4 my-6 text-center'>
           <div>
-            <img src="/images/dataracks-rail-solutions/dataracks-data-centre-racks1.jpg" alt="" className='w-full' />
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/dataracks-rail-solutions/dataracks-data-centre-racks1.jpg" alt="" className='w-full' />
+            </div>
             <p className="my-3">Data Centre Racks</p>
           </div>
           <div>
-            <img src="/images/dataracks-rail-solutions/dataracks-aisle-containment1.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/dataracks-rail-solutions/dataracks-aisle-containment1.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            </div>
             <p className="my-3">Aisle Containment</p>
           </div>
         </div>
@@ -153,11 +227,15 @@ export const solutions = [
         </p>
         <div className='md:flex gap-4 my-6 text-center'>
           <div>
-            <img src="/images/dataracks-rail-solutions/dataracks-indoor-racks-cabinets1.jpg" alt="" className='w-full' />
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/dataracks-rail-solutions/dataracks-indoor-racks-cabinets1.jpg" alt="" className='w-full' />
+            </div>
             <p className="my-3">Indoor Racks & Cabinets</p>
           </div>
           <div>
-            <img src="/images/dataracks-rail-solutions/dataracks-outdoor-cabinets.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/dataracks-rail-solutions/dataracks-outdoor-cabinets.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            </div>
             <p className="my-3">Street Cabinets</p>
           </div>
         </div>
@@ -186,11 +264,15 @@ export const solutions = [
         </p>
         <div className='md:flex gap-4 my-6 text-center'>
           <div>
-            <img src="/images/dataracks-rail-solutions/dataracks-indoor-racks-cabinets1.jpg" alt="" className='w-full' />
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/dataracks-rail-solutions/dataracks-indoor-racks-cabinets1.jpg" alt="" className='w-full' />
+            </div>
             <p className="my-3">Indoor Racks & Cabinets</p>
           </div>
           <div>
-            <img src="/images/dataracks-rail-solutions/dataracks-outdoor-cabinets.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/dataracks-rail-solutions/dataracks-outdoor-cabinets.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            </div>
             <p className="my-3">Street Cabinets</p>
           </div>
         </div>
@@ -219,11 +301,15 @@ export const solutions = [
         </p>
         <div className='md:flex gap-4 my-6 text-center'>
           <div>
-            <img src="/images/dataracks-rail-solutions/dataracks-naval-enclosures1.jpg" alt="" className='w-full' />
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/dataracks-rail-solutions/dataracks-naval-enclosures1.jpg" alt="" className='w-full' />
+            </div>
             <p className="my-3">Naval Enclosures</p>
           </div>
           <div>
-            <img src="/images/dataracks-rail-solutions/dataracks-land-and-infrastructure-systems1.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
+              <img src="/images/dataracks-rail-solutions/dataracks-land-and-infrastructure-systems1.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            </div>
             <p className="my-3">Land & Infrastructure Systems</p>
           </div>
         </div>
@@ -250,7 +336,7 @@ export default function Home() {
     "Delivery & Installation"
   ];
 
-  
+
   return <>
     <Hero />
 
@@ -314,10 +400,12 @@ export default function Home() {
           {services.map((single, index) => <div key={index} className="bg-white p-8">
             <p className="text-xl text-[#595853] font-light">{single}</p>
 
-            <button className="flex gap-4 mt-32">
-              <span>Explore</span>
-              <ArrowRight className="" />
-            </button>
+            <Link to={'/services'}>
+              <button className="flex gap-4 mt-32">
+                <span>Explore</span>
+                <ArrowRight className="" />
+              </button>
+            </Link>
           </div>)}
         </div>
       </div>

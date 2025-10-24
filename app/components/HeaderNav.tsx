@@ -174,7 +174,7 @@ const HeaderNav = () => {
                                         <span className="text-3xl">{isSolutionsOpen ? "−" : "+"}</span>
                                     </summary>
                                     <ul className="mt-3 space-y-3 text-base">
-                                        {solutions.map((single) => <li>
+                                        {solutions.map((single) => <li key={single.title} >
                                             <Link onClick={() => setMenuOpen(false)} to={`/solutions/${stringToSlug(single.title)}`}>{single.title}</Link>
                                         </li>
                                         )}
@@ -199,7 +199,7 @@ const HeaderNav = () => {
                                         <span className="text-3xl">{isProductsOpen ? "−" : "+"}</span>
                                     </summary>
                                     <ul className="mt-3 space-y-3 text-base">
-                                        {allProducts.map((single) => <li>
+                                        {allProducts.map((single) => <li key={single.title} >
                                             <Link onClick={() => setMenuOpen(false)} to={`/products${single.slug}`}>{single.title}</Link>
                                         </li>
                                         )}
