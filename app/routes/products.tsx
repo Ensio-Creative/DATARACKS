@@ -16,35 +16,44 @@ const products = () => {
     const allProducts = [
         {
             title: "Modular Security Cages",
-            image: "dataracks-home-security-cages-products.jpg"
+            image: "dataracks-home-security-cages-products.jpg",
+            slug: "/security-cages"
         },
         {
             title: "Aisle Containment",
-            image: "dataracks-home-aisle-containment-products.jpg"
+            image: "dataracks-home-aisle-containment-products.jpg",
+            slug: "/aisle-containment"
+
         },
         {
             title: "Server & Network Cabinets",
-            image: "dataracks-home-server-cabinets-products.jpg"
+            image: "dataracks-home-server-cabinets-products.jpg",
+            slug: "/server-cabinets"
         },
         {
             title: "Cabinet Accessories",
-            image: "dataracks-cabinet.jpg"
+            image: "dataracks-cabinet.jpg",
+            slug: "/cabinet-accessories"
         },
         {
             title: "Wallboxes",
-            image: "dataracks-wallboxes-product.jpg"
+            image: "dataracks-wallboxes-product.jpg",
+            slug: ""
         },
         {
             title: "Retrofit Solutions",
-            image: "dataracks-retrofit-solutions.jpg"
+            image: "dataracks-retrofit-solutions.jpg",
+            slug: ""
         },
         {
             title: "Micro Data Centres",
-            image: "dataracks-micro-data-centre-products.jpg"
+            image: "dataracks-micro-data-centre-products.jpg",
+            slug: ""
         },
         {
             title: "Electromechanical solutions",
-            image: "dataracks-electromechanical-solutions.jpg"
+            image: "dataracks-electromechanical-solutions.jpg",
+            slug: ""
         }
     ]
     return (
@@ -60,8 +69,10 @@ const products = () => {
             <section className='max-w-7xl mx-auto my-20 px-4'>
                 <div className="grid md:grid-cols-4 gap-4">
                     {allProducts.map((single, index) => <div key={index}>
-                        <img src={`/images/products/${single.image}`} alt="" />
-                        <p className='text-2xl my-4 font-light'>{single.title}</p>
+                        <Link to={`/products${single.slug}`}>
+                            <img src={`/images/products/${single.image}`} alt="" />
+                            <p className='text-2xl my-4 font-light'>{single.title}</p>
+                        </Link>
                     </div>)}
 
                 </div>

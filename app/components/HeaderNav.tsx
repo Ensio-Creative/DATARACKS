@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
+import { solutions } from "~/routes/home";
 
 const HeaderNav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -16,18 +17,52 @@ const HeaderNav = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const products = ["Modular Security Cages", "Aisle Containment", "Server & Network  Cabinets", "Cabinet Accessories", "Wallboxes", "Retrofit Solutions", "Micro Data Centres", "Electromechanical Solutions"]
-    const solutions = ["OEM Contract & Manufacture", "Rail Solutions", "Road Solutions", "Energy Solutions", "Data Centre Solutions", "Fixed Telecom Solutions", "Mobile Telecom Solutions", "Defense Solutions"]
+    const products = [
+        {
+            title: "Modular Security Cages",
+            slug: "/security-cages"
+        },
+        {
+            title: "Aisle Containment",
+            slug: "/aisle-containment"
+
+        },
+        {
+            title: "Server & Network Cabinets",
+            slug: "/server-cabinets"
+        },
+        {
+            title: "Cabinet Accessories",
+            slug: "/cabinet-accessories"
+        },
+        {
+            title: "Wallboxes",
+            slug: ""
+        },
+        {
+            title: "Retrofit Solutions",
+            slug: ""
+        },
+        {
+            title: "Micro Data Centres",
+            slug: ""
+        },
+        {
+            title: "Electromechanical solutions",
+            slug: ""
+        }
+    ]
+
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isProductsOpen ? "bg-white shadow-sm" : "bg-transparent"
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isProductsOpen || isSolutionsOpen ? "bg-white shadow-sm" : "bg-transparent"
                 }`}
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center h-20 px-4">
                 {/* Logo */}
                 <Link to="/" className="flex items-center z-50">
                     <img
-                        src={`/images/dataracks-logo${isScrolled || menuOpen || isProductsOpen ? "2" : "1"}.svg`}
+                        src={`/images/dataracks-logo${isScrolled || menuOpen || isProductsOpen || isSolutionsOpen ? "2" : "1"}.svg`}
                         alt="Dataracks"
                         className="w-36"
                     />
@@ -61,7 +96,7 @@ const HeaderNav = () => {
                                         <p className="text-3xl">Solutions</p>
                                     </div>
                                     <div className="grid grid-cols-3 gap-4">
-                                        {solutions.map((single, index) => <div key={index + single} className="py-4 border-b border-[#CFCFCF]">{single}</div>)}
+                                        {solutions.map((single, index) => <div key={index + single.title} className="py-4 border-b border-[#CFCFCF]">{single.title}</div>)}
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +132,11 @@ const HeaderNav = () => {
                                         <p className="text-3xl">Products</p>
                                     </div>
                                     <div className="grid grid-cols-3 gap-4">
-                                        {products.map((single, index) => <div key={index + single} className="py-4 border-b border-[#CFCFCF]">{single}</div>)}
+                                        {products.map((single, index) => <div key={index + single.title} className="py-4 border-b border-[#CFCFCF]">
+                                            <Link to={`/products${single.slug}`}>
+                                                {single.title}
+                                            </Link>
+                                        </div>)}
                                     </div>
                                 </div>
                             </div>
@@ -157,7 +196,7 @@ const HeaderNav = () => {
                                     </summary>
                                     <ul className="mt-3 space-y-3 text-base">
                                         {solutions.map((single) => <li>
-                                            <Link to={''}>{single}</Link>
+                                            <Link to={''}>{single.title}</Link>
                                         </li>
                                         )}
 
@@ -182,7 +221,7 @@ const HeaderNav = () => {
                                     </summary>
                                     <ul className="mt-3 space-y-3 text-base">
                                         {products.map((single) => <li>
-                                            <Link to={''}>{single}</Link>
+                                            <Link to={`/products${single.slug}`}>{single.title}</Link>
                                         </li>
                                         )}
 
