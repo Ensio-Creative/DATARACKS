@@ -1,4 +1,6 @@
 import { Link } from "react-router";
+import { solutions } from "~/routes/home";
+import { allProducts } from "~/routes/products";
 
 const FooterNav = () => (
     <footer className="bg-[#EAF4FF] py-10">
@@ -10,14 +12,7 @@ const FooterNav = () => (
             <div>
                 <h4 className=" mb-3 text-[#595853]">Solutions</h4>
                 <ul className="space-y-3 ">
-                    <li><Link to="/">OEM Contract & Manufacture</Link></li>
-                    <li><Link to="/about">Rail Solutions</Link></li>
-                    <li><Link to="/contact">Road Solutions</Link></li>
-                    <li><Link to="/contact">Energy Solutions</Link></li>
-                    <li><Link to="/contact">Data Centre Solutions</Link></li>
-                    <li><Link to="/contact">Fixed Telecom Solutions</Link></li>
-                    <li><Link to="/contact">Mobile Telecom Solutions</Link></li>
-                    <li><Link to="/contact">Defense Solutions</Link></li>
+                    {solutions.map((siglee, index) => <li><Link to="/">{siglee.title}</Link></li>)}
 
                 </ul>
             </div>
@@ -25,14 +20,7 @@ const FooterNav = () => (
             <div>
                 <h4 className=" mb-3 text-[#595853]">Products</h4>
                 <ul className="space-y-3">
-                    <li><Link to="/">Modular Security Cages</Link></li>
-                    <li><Link to="/about">Aisle Containment</Link></li>
-                    <li><Link to="/contact">Server & Network Cabinets</Link></li>
-                    <li><Link to="/contact">Cabinet Accessories</Link></li>
-                    <li><Link to="/contact">Wallboxes</Link></li>
-                    <li><Link to="/contact">Retrofit Solutions</Link></li>
-                    <li><Link to="/contact">Micro Data Centres</Link></li>
-                    <li><Link to="/contact">Electromechanical Solutions</Link></li>
+                    {allProducts.map((single, index) => <li><Link to={`/products${single.slug}`}>{single.title}</Link></li>)}
                 </ul>
             </div>
             <div>
@@ -40,7 +28,7 @@ const FooterNav = () => (
                 <ul className="space-y-3 ">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About us</Link></li>
-                    <li><Link to="/about">Services</Link></li>
+                    <li><Link to="/services">Services</Link></li>
 
                     <li><Link to="/contact">Contact us</Link></li>
                 </ul>

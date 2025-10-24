@@ -11,51 +11,52 @@ export function meta({ }: Route.MetaArgs) {
     ];
 }
 
+export const allProducts = [
+    {
+        title: "Modular Security Cages",
+        image: "dataracks-home-security-cages-products.jpg",
+        slug: "/security-cages"
+    },
+    {
+        title: "Aisle Containment",
+        image: "dataracks-home-aisle-containment-products.jpg",
+        slug: "/aisle-containment"
+
+    },
+    {
+        title: "Server & Network Cabinets",
+        image: "dataracks-home-server-cabinets-products.jpg",
+        slug: "/server-cabinets"
+    },
+    {
+        title: "Cabinet Accessories",
+        image: "dataracks-cabinet.jpg",
+        slug: "/cabinet-accessories"
+    },
+    {
+        title: "Wallboxes",
+        image: "dataracks-wallboxes-product.jpg",
+        slug: ""
+    },
+    {
+        title: "Retrofit Solutions",
+        image: "dataracks-retrofit-solutions.jpg",
+        slug: ""
+    },
+    {
+        title: "Micro Data Centres",
+        image: "dataracks-micro-data-centre-products.jpg",
+        slug: ""
+    },
+    {
+        title: "Electromechanical solutions",
+        image: "dataracks-electromechanical-solutions.jpg",
+        slug: ""
+    }
+]
 
 const products = () => {
-    const allProducts = [
-        {
-            title: "Modular Security Cages",
-            image: "dataracks-home-security-cages-products.jpg",
-            slug: "/security-cages"
-        },
-        {
-            title: "Aisle Containment",
-            image: "dataracks-home-aisle-containment-products.jpg",
-            slug: "/aisle-containment"
 
-        },
-        {
-            title: "Server & Network Cabinets",
-            image: "dataracks-home-server-cabinets-products.jpg",
-            slug: "/server-cabinets"
-        },
-        {
-            title: "Cabinet Accessories",
-            image: "dataracks-cabinet.jpg",
-            slug: "/cabinet-accessories"
-        },
-        {
-            title: "Wallboxes",
-            image: "dataracks-wallboxes-product.jpg",
-            slug: ""
-        },
-        {
-            title: "Retrofit Solutions",
-            image: "dataracks-retrofit-solutions.jpg",
-            slug: ""
-        },
-        {
-            title: "Micro Data Centres",
-            image: "dataracks-micro-data-centre-products.jpg",
-            slug: ""
-        },
-        {
-            title: "Electromechanical solutions",
-            image: "dataracks-electromechanical-solutions.jpg",
-            slug: ""
-        }
-    ]
     return (
         <>
             <Hero title="Products" image='/images/dataracks-products-header.jpg' />

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { solutions } from "~/routes/home";
+import { allProducts } from "~/routes/products";
 
 const HeaderNav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -17,42 +18,7 @@ const HeaderNav = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const products = [
-        {
-            title: "Modular Security Cages",
-            slug: "/security-cages"
-        },
-        {
-            title: "Aisle Containment",
-            slug: "/aisle-containment"
-
-        },
-        {
-            title: "Server & Network Cabinets",
-            slug: "/server-cabinets"
-        },
-        {
-            title: "Cabinet Accessories",
-            slug: "/cabinet-accessories"
-        },
-        {
-            title: "Wallboxes",
-            slug: ""
-        },
-        {
-            title: "Retrofit Solutions",
-            slug: ""
-        },
-        {
-            title: "Micro Data Centres",
-            slug: ""
-        },
-        {
-            title: "Electromechanical solutions",
-            slug: ""
-        }
-    ]
-
+    
     return (
         <header
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isProductsOpen || isSolutionsOpen ? "bg-white shadow-sm" : "bg-transparent"
@@ -132,7 +98,7 @@ const HeaderNav = () => {
                                         <p className="text-3xl">Products</p>
                                     </div>
                                     <div className="grid grid-cols-3 gap-4">
-                                        {products.map((single, index) => <div key={index + single.title} className="py-4 border-b border-[#CFCFCF]">
+                                        {allProducts.map((single, index) => <div key={index + single.title} className="py-4 border-b border-[#CFCFCF]">
                                             <Link to={`/products${single.slug}`}>
                                                 {single.title}
                                             </Link>
@@ -220,7 +186,7 @@ const HeaderNav = () => {
                                         <span className="text-3xl">{isProductsOpen ? "−" : "+"}</span>
                                     </summary>
                                     <ul className="mt-3 space-y-3 text-base">
-                                        {products.map((single) => <li>
+                                        {allProducts.map((single) => <li>
                                             <Link to={`/products${single.slug}`}>{single.title}</Link>
                                         </li>
                                         )}
