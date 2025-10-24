@@ -41,7 +41,7 @@ const SecurityCages = () => {
     ]
     return (
         <>
-            <Hero title="Security Cages" image='/images/dataracks-security-cages-header.jpg' />
+            <Hero title="Modular Security Cages" image='/images/dataracks-security-cages-header.jpg' />
             <section className='max-w-7xl mx-auto px-4 py-32'>
                 <div className='grid md:grid-cols-2 gap-10'>
                     <div><p className='md:text-5xl text-3xl font-light'>Customisable Security Cages designed for IT equipment maximum protection </p></div>

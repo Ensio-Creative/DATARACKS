@@ -9,4 +9,6 @@ export default [
     route("/products/server-cabinets", "routes/products/server-cabinets.tsx"),
     route("/products/security-cages", "routes/products/security-cages.tsx"),
     route("/products/aisle-containment", "routes/products/aisle-containment.tsx"),
+    route("/products/cabinet-accessories", "routes/products/cabinet-accessories.tsx"),
+
 ] satisfies RouteConfig;

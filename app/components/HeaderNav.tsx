@@ -5,6 +5,7 @@ const HeaderNav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isProductsOpen, setIsProductsOpen] = useState(false);
+    const [isSolutionsOpen, setIsSolutionssOpen] = useState(false)
 
     // Track scroll position
     useEffect(() => {
@@ -15,6 +16,8 @@ const HeaderNav = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const products = ["Modular Security Cages", "Aisle Containment", "Server & Network  Cabinets", "Cabinet Accessories", "Wallboxes", "Retrofit Solutions", "Micro Data Centres", "Electromechanical Solutions"]
+    const solutions = ["OEM Contract & Manufacture", "Rail Solutions", "Road Solutions", "Energy Solutions", "Data Centre Solutions", "Fixed Telecom Solutions", "Mobile Telecom Solutions", "Defense Solutions"]
     return (
         <header
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isProductsOpen ? "bg-white shadow-sm" : "bg-transparent"
@@ -32,20 +35,38 @@ const HeaderNav = () => {
 
                 {/* Desktop Navigation */}
                 <nav
-                    className={`hidden md:flex space-x-8 transition ${isScrolled || isProductsOpen ? "text-[#0F0765]" : "text-white"
+                    className={`hidden md:flex space-x-8 transition ${isScrolled || isProductsOpen || isSolutionsOpen ? "text-[#0F0765]" : "text-white"
                         }`}
                 >
                     <Link to="/" className="hover:text-primary transition">
                         Home
                     </Link>
 
-                    <button className="hover:text-primary transition flex items-center space-x-1">
-                        <Link to="/products" className="flex gap-1">
+                    <div
+                        className="group"
+                        onMouseEnter={() => { setIsSolutionssOpen(true), setIsProductsOpen(false) }}
+                    >
+                        <button className="hover:text-primary transition flex items-center space-x-1">
+                            {/* <Link to="/products" className="flex gap-1"> */}
                             <span>Solutions</span>
-                            <img src="/images/arrow.svg" className={`${isProductsOpen ? 'rotate-180' : ""}`} alt="" />
+                            <img src="/images/arrow.svg" className={`${isSolutionsOpen ? 'rotate-180' : ""}`} alt="" />
                             {/* <span className="text-sm"> {isProductsOpen ?  : "▼"} </span> */}
-                        </Link>
-                    </button>
+                            {/* </Link> */}
+                        </button>
+                        {isSolutionsOpen && (
+                            <div onMouseLeave={() => setIsSolutionssOpen(false)}
+                                className="absolute left-0 right-0 top-full w-screen bg-white shadow-lg border-t border-[#CFCFCF]">
+                                <div className="max-w-7xl mx-auto py-8 flex justify-between gap-4">
+                                    <div className="w-[30%]">
+                                        <p className="text-3xl">Solutions</p>
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-4">
+                                        {solutions.map((single, index) => <div key={index} className="py-4 border-b border-[#CFCFCF]">{single}</div>)}
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
 
                     <Link to="/services" className="hover:text-primary transition">
                         Services
@@ -54,7 +75,10 @@ const HeaderNav = () => {
                     {/* Products Dropdown */}
                     <div
                         className=" group"
-                        onMouseEnter={() => setIsProductsOpen(true)}
+                        onMouseEnter={() => {
+                            setIsProductsOpen(true),
+                                setIsSolutionssOpen(false)
+                        }}
                     >
                         <button className="hover:text-primary transition flex items-center space-x-1">
                             <Link to="/products" className="flex gap-1">
@@ -68,45 +92,13 @@ const HeaderNav = () => {
                         {isProductsOpen && (
                             <div onMouseLeave={() => setIsProductsOpen(false)}
                                 className="absolute left-0 right-0 top-full w-screen bg-white shadow-lg border-t border-[#CFCFCF]">
-                                <div className="max-w-6xl ml-auto px-10 py-8 grid grid-cols-3 gap-6">
-                                    {/* Product 1 */}
-                                    <Link
-                                        to="/products/server-cabinets"
-                                        className="hover:opacity-80 transition"
-                                    >
-                                        <img
-                                            src="/images/header/dataracks-home-server-cabinets-product.jpg"
-                                            alt="Server Cabinets"
-                                            className="mb-4 h-40 w-full object-cover"
-                                        />
-                                        <p className="text-[#0F0765] text-lg">Server Cabinets</p>
-                                    </Link>
-
-                                    {/* Product 2 */}
-                                    <Link
-                                        to="/products/aisle-containment"
-                                        className="hover:opacity-80 transition"
-                                    >
-                                        <img
-                                            src="/images/header/dataracks-home-aisle-containment.jpg"
-                                            alt="Aisle Containment"
-                                            className="mb-4 h-40 w-full object-cover"
-                                        />
-                                        <p className="text-[#0F0765] text-lg">Aisle Containment</p>
-                                    </Link>
-
-                                    {/* Product 3 */}
-                                    <Link
-                                        to="/products/security-cages"
-                                        className="hover:opacity-80 transition"
-                                    >
-                                        <img
-                                            src="/images/header/dataracks-home-security-cages-product.jpg"
-                                            alt="Security Cages"
-                                            className="mb-4 h-40 w-full object-cover"
-                                        />
-                                        <p className="text-[#0F0765] text-lg">Security Cages</p>
-                                    </Link>
+                                <div className="max-w-7xl mx-auto py-8 flex justify-between gap-4">
+                                    <div className="w-[30%]">
+                                        <p className="text-3xl">Products</p>
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-4">
+                                        {products.map((single, index) => <div key={index} className="py-4 border-b border-[#CFCFCF]">{single}</div>)}
+                                    </div>
                                 </div>
                             </div>
                         )}

@@ -8,6 +8,8 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Link } from "react-router";
+import { ArrowRight } from "lucide-react";
+import Marquee from "react-fast-marquee";
 
 
 export function meta({ }: Route.MetaArgs) {
@@ -19,19 +21,12 @@ export function meta({ }: Route.MetaArgs) {
 }
 
 export default function Home() {
-  const products = [
-    { name: "Server Cabinets", img: "/images/dataracks-home-server-cabinets-product.jpg" },
-    { name: "Aisle Containment", img: "/images/dataracks-home-aisle-containment.jpg" },
-    { name: "Security Cages", img: "/images/dataracks-home-security-cages-product.jpg" },
-  ];
 
-  const sectors = [
-    "Data Centres",
-    "Telecom",
-    "Energy",
-    "Rail",
-    "Defence",
-    "Road",
+  const services = [
+    "Design",
+    "Manufacturing",
+    "Expert Advise",
+    "Delivery & Installation"
   ];
 
   function stringToSlug(text: string): string {
@@ -67,6 +62,72 @@ export default function Home() {
 
     </section>
 
+    <section className="max-w-7xl mx-auto py-20 p-4">
+      <h3 className="text-4xl font-light mb-4">Our Solutions</h3>
+
+    </section>
+
+    <section className="bg-[#F5F5F5] py-20">
+      <div className="max-w-7xl mx-auto p-4">
+        <div>
+          <h3 className="text-4xl font-light mb-4">Our Services</h3>
+          <p className="text-[#595853]">From design to installation, we provide an end-to-end services <br />
+            for performance, efficiency, and sustainability.</p>
+        </div>
+
+        <div className="grid md:grid-cols-4  gap-6 mt-8">
+          {services.map((single, index) => <div key={index} className="bg-white p-8">
+            <p className="text-xl text-[#595853] font-light">{single}</p>
+
+            <button className="flex gap-4 mt-32">
+              <span>Explore</span>
+              <ArrowRight className="" />
+            </button>
+          </div>)}
+        </div>
+      </div>
+
+    </section>
+
+
+    <section className="py-20">
+      <div className="text-center p-4">
+        <h3 className="text-4xl font-light mb-4">Trusted by Top Companies</h3>
+        <p className="text-[#595853]">We have blue-chip client base, which includes major names in <br /> the IT and telecoms sectors.</p>
+      </div>
+
+      <div className="overflow-hidden w-full mt-10 flex justify-center">
+        <div className="w-[100%]">
+          <Marquee pauseOnHover={true} gradient={false} speed={40}>
+            <div className="flex items-center py-4">
+              {[
+                "/images/companies/sky-logo.jpg",
+                "/images/companies/vodafone-logo.jpg",
+                "/images/companies/aws-logo.jpg",
+                "/images/companies/data-4-logo.jpg",
+                "/images/companies/airsys-logo.jpg",
+                "/images/companies/datum-logo.jpg",
+                "/images/companies/JCA-Engineering-logo1.jpg",
+                "/images/companies/lunar-digital-logo.jpg",
+                "/images/companies/secure-it-environment-logo.jpg",
+              ].map((src, i) => (
+                <div
+                  key={i}
+                  className="border border-[#CFCFCF] bg-white mx-4 p-4 flex items-center justify-center w-[300px] h-[100px] shrink-0"
+                >
+                  <img
+                    src={src}
+                    alt="company logo"
+                    className="object-contain h-12 w-auto"
+                  />
+                </div>
+              ))}
+            </div>
+          </Marquee>
+        </div>
+      </div>
+
+    </section>
     {/* <section className="max-w-7xl mx-auto py-20 px-4">
       <h3 className="md:text-4xl text-3xl mb-10 font-light">Our Products</h3>
       <div className="md:grid md:grid-cols-2 gap-6">

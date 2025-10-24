@@ -99,7 +99,7 @@ const ServerCabinets = () => {
         },
         {
             title: 'Cabinet Extensions',
-            image: '/images/server-cabinets/dataracks-cabinet-extensions.jpg',
+            image: '/images/server-cabinets/dataracks-cabinet-extension.jpg',
             content: (<div>
                 <p>Regardless of your cabinet type or size, we manufacture a vast range of cabinet  extensions from our UK-based factory to the highest standards and to  meet your exact requirements.
                     <br /> <br />
@@ -216,19 +216,21 @@ const ServerCabinets = () => {
 
     return (
         <>
-            <Hero title="Server Cabinets" image='/images/dataracks-server-cabinets-header.jpg' />
+            <Hero title="Server & Network Cabinets" image='/images/dataracks-server-cabinets-header.jpg' />
             <section className='max-w-7xl mx-auto px-4 py-32'>
                 <div className='grid md:grid-cols-3 gap-6'>
                     {serverData.map((item, index) => (
                         <div key={index} className='cursor-pointer' onClick={() => { setSelectedItem(item), setShow(true) }}>
-                            <img src={item.image} alt={item.title} className='w-full object-cover' />
+                            <div className='border border-[#CFCFCF] p-4'>
+                                <img src={item.image} alt={item.title} className='w-full object-cover' />
+
+                            </div>
                             <div className='p-4'>
                                 <h3 className='text-lg mb-2'>{item.title}</h3>
                             </div>
                         </div>
                     ))}
                     <Modal image={selectedItem?.image} title={selectedItem?.title} show={show} content={selectedItem?.content} onClose={() => { setSelectedItem(null), setShow(false) }} />
-
                 </div>
             </section>
         </>
