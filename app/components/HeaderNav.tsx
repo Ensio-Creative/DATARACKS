@@ -1,13 +1,22 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
-import { solutions } from "~/routes/home";
+import { solutions, stringToSlug } from "~/routes/home";
 import { allProducts } from "~/routes/products";
+import { useLocation } from "react-router";
 
 const HeaderNav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isProductsOpen, setIsProductsOpen] = useState(false);
     const [isSolutionsOpen, setIsSolutionssOpen] = useState(false)
+
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.pathname.includes("/solutions")) {
+            setIsScrolled(true);
+        }
+    }, [location.pathname, isScrolled]);
 
     // Track scroll position
     useEffect(() => {
@@ -18,7 +27,7 @@ const HeaderNav = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    
+
     return (
         <header
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isProductsOpen || isSolutionsOpen ? "bg-white shadow-sm" : "bg-transparent"
@@ -62,7 +71,11 @@ const HeaderNav = () => {
                                         <p className="text-3xl">Solutions</p>
                                     </div>
                                     <div className="grid grid-cols-3 gap-4">
-                                        {solutions.map((single, index) => <div key={index + single.title} className="py-4 border-b border-[#CFCFCF]">{single.title}</div>)}
+                                        {solutions.map((single, index) => <div key={index + single.title} className="py-4 border-b border-[#CFCFCF]">
+                                            <Link to={`/solutions/${stringToSlug(single.title)}`}>
+                                                {single.title}</Link>
+                                        </div>
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -162,7 +175,7 @@ const HeaderNav = () => {
                                     </summary>
                                     <ul className="mt-3 space-y-3 text-base">
                                         {solutions.map((single) => <li>
-                                            <Link to={''}>{single.title}</Link>
+                                            <Link onClick={() => setMenuOpen(false)} to={`/solutions/${stringToSlug(single.title)}`}>{single.title}</Link>
                                         </li>
                                         )}
 
@@ -187,7 +200,7 @@ const HeaderNav = () => {
                                     </summary>
                                     <ul className="mt-3 space-y-3 text-base">
                                         {allProducts.map((single) => <li>
-                                            <Link to={`/products${single.slug}`}>{single.title}</Link>
+                                            <Link onClick={() => setMenuOpen(false)} to={`/products${single.slug}`}>{single.title}</Link>
                                         </li>
                                         )}
 

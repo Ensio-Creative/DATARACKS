@@ -22,16 +22,86 @@ export function meta({ }: Route.MetaArgs) {
 
 export const solutions = [
   {
-    title: "OEM & Contract Manufacture",
-    image: "dataracks-oem-contract-&-manufacture.jpg"
+    title: "OEM and Contract Manufacture",
+    image: "dataracks-oem-contract-&-manufacture.jpg",
+    content: (
+      <div>
+        <p className='my-6 text-[#0F0765] text-3xl font-light'>Expertise in OEM Partnerships</p>
+        <p>
+          Dataracks brings extensive experience collaborating with original equipment manufacturers (OEMs) that deliver advanced systems for both indoor and outdoor applications. With decades of industry expertise, we understand the challenges of protecting sensitive electronic equipment in environments where reliability and performance are critical.
+          <br /> <br />
+          In partnership with your engineering and product development teams, we design and manufacture enclosures tailored precisely to your requirements. Every solution is engineered with precision, using high-quality materials and manufacturing processes to meet industry standards and withstand the demands of your operating environment.
+          <br /> <br />
+
+          Our experts work to optimise your entire system—enhancing reliability, maximising performance, and reducing total cost of ownership (ToC). By combining mechanical design excellence with practical engineering insight, we ensure your assets perform at their best throughout their lifecycle.
+          <br /> <br />
+
+          Our application expertise spans a wide range of environments, including telephone exchanges, data centres, roadside installations, agricultural sites, electricity substations, solar and wind farms, as well as marine and submarine settings. Whether it’s thermal management, ingress protection, or custom integration, our enclosures are built to perform wherever your technology operates.
+          <br /> <br />
+
+          Beyond product design, Dataracks provides full support from concept to delivery, including prototyping, testing, and certification. Our flexible manufacturing capability allows us to deliver both standard and fully customised solutions, helping you bring your products to market quickly and confidently.
+        </p>
+      </div>
+    )
   },
   {
     title: "Rail Solutions",
-    image: "dataracks-rail-solutions.jpg"
+    image: "dataracks-rail-solutions.jpg",
+    content: (
+      <div>
+        <p className='my-6 text-[#0F0765] text-3xl font-light'>Precision-Built Cabinets for Critical Roadside Systems</p>
+        <p>
+          For our rail customers, we offer a comprehensive range of enclosures engineered to meet the demanding requirements of the railway environment. Our portfolio includes enclosures designed to Network Rail PA05 specifications, as well as SISS/CIS cabinets and location cases (LOCs) for housing telecom, signalling, and switchgear equipment.
+          <br /> <br />
+          Our engineering team has extensive experience delivering enclosure solutions for rail projects across the UK. We design and manufacture in full compliance with Rail Industry standards, ensuring safety, reliability, and long-term performance in the field.
+          <br /> <br />
+
+          As a registered supplier under the RISQS (Railway Industry Supplier Qualification Scheme) and proud members of the Rail Alliance, Dataracks operates to ISO 9001 quality management standards, guaranteeing consistent quality and traceability.
+          <br /> <br />
+
+          Our BR440, 19”, and ETSI format racks, cabinets, and location cases are deployed in a wide range of rail applications — including station information and security (CCTV), Wi-Fi control systems, car park ANPR, train monitoring, and signalling infrastructure.
+        </p>
+        <div className='md:flex gap-4 my-6 text-center'>
+          <div>
+            <img src="/images/dataracks-rail-solutions/dataracks-cabinet-commsafe1.jpg" alt="" className='w-full' />
+            <p className="my-3">COMMSAFE™</p>
+          </div>
+          <div>
+            <img src="/images/dataracks-rail-solutions/dataracks-cabinet-tracksafe1.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            <p className="my-3">TRACKSAFE™</p>
+          </div>
+        </div>
+      </div>
+    )
   },
   {
     title: "Road Solutions",
-    image: "dataracks-road-solutions.jpg"
+    image: "dataracks-road-solutions.jpg",
+    content: (
+      <div>
+        <p className='my-6 text-[#0F0765] text-3xl font-light'>Precision-Built Cabinets for Critical Roadside Systems</p>
+        <p>
+          Our roadside cabinets are expertly engineered to deliver exceptional protection for vital roadside infrastructure. Built for durability and reliability, they safeguard a wide range of critical equipment — including ANPR and CCTV systems, traffic sign and signal controllers, instrumentation, power and communications marshalling, control panels, pumps, and other essential roadside components.
+          <br /> <br />
+          Every cabinet is designed to withstand the challenges of outdoor environments, offering protection against weather, corrosion, vibration, and vandalism. With a focus on long-term performance, our enclosures ensure that sensitive systems remain operational and secure in even the most demanding conditions.
+          <br /> <br />
+
+          Our extensive range of housing solutions includes roadside and streetside cabinets, EMC- and high IP-rated enclosures, temperature-controlled units, anti-vandal designs, and telecom cabinets. Each solution is engineered with precision to meet industry standards and tailored to suit the specific technical requirements of your project.
+          <br /> <br />
+          We combine advanced materials, proven manufacturing processes, and rigorous quality control to guarantee structural integrity and reliability across every unit. From design to delivery, our experienced teams work closely with clients to create enclosure systems that are functional, adaptable, and future-ready.
+        </p>
+        <div className='md:flex gap-4 my-6 text-center'>
+          <div>
+            <img src="/images/dataracks-rail-solutions/dataracks-roadside-cabinets.jpg" alt="" className='w-full' />
+            <p className="my-3">Road Cabinets</p>
+          </div>
+          <div>
+            <img src="/images/dataracks-rail-solutions/dataracks-ev-charging-enclosures.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            <p className="my-3">EV Charging Enclosures</p>
+          </div>
+        </div>
+      </div>
+    )
   },
   {
     title: "Energy Solutions",
@@ -39,21 +109,137 @@ export const solutions = [
   },
   {
     title: "Data Centre Solutions",
-    image: "dataracks-data-centre-solutions.jpg"
+    image: "dataracks-data-centre-solutions.jpg",
+    content: (
+      <div>
+        <p className='my-6 text-[#0F0765] text-3xl font-light'>Engineered Data Centre Infrastructure</p>
+        <p>
+          With more than four decades of manufacturing expertise, Dataracks delivers globally certified, high-performance data centre infrastructure designed for scalability, operational efficiency, and long-term reliability. Our engineering capability covers racks, containment systems, and modular equipment buildings, all developed to integrate seamlessly across enterprise, colocation, hyperscale, and subsea environments.
+          <br /> <br />
+          Each solution is underpinned by advanced engineering and automation, supported by core competencies in thermal management, seismic resilience, EMC shielding, and ingress protection (IP). This ensures consistent performance and compliance for operators, integrators, and OEMs seeking a proven alternative to legacy systems.
+          <br /> <br />
+
+          At Dataracks, we understand that every data centre presents unique operational challenges. Rather than relying on standard catalogue products, we engineer rack and containment solutions tailored to specific environmental and performance requirements.
+          <br /> <br />
+
+          Manufactured entirely within our UK facility, our products are built on proven mechanical and electrical designs, combining flexibility, resilience, and performance for mission-critical applications where uptime and reliability are non-negotiable.
+        </p>
+        <div className='md:flex gap-4 my-6 text-center'>
+          <div>
+            <img src="/images/dataracks-rail-solutions/dataracks-data-centre-racks1.jpg" alt="" className='w-full' />
+            <p className="my-3">Data Centre Racks</p>
+          </div>
+          <div>
+            <img src="/images/dataracks-rail-solutions/dataracks-aisle-containment1.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            <p className="my-3">Aisle Containment</p>
+          </div>
+        </div>
+      </div>
+    )
   },
   {
     title: "Fixed Telecom Solutions",
-    image: "dataracks-fixed-telecom-solutions.jpg"
+    image: "dataracks-fixed-telecom-solutions.jpg",
+    content: (
+      <div>
+        <p className='my-6 text-[#0F0765] text-3xl font-light'>Fixed Telecom Infrastructure Solutions</p>
+        <p>
+          Dataracks provides advanced telecom enclosure solutions engineered to meet the demands of modern fixed network infrastructure. Our product range includes outdoor telecom cabinets, streetside broadband enclosures for FTTx networks such as FTTP, FTTC, and FTTH, as well as indoor 19” rack systems, overhead cable management, and hot and cold aisle containment systems for high-performance data environments.
+          <br /> <br />
+          We specialise in the design and manufacture of durable, precision-engineered enclosures that protect critical telecom and networking equipment in both remote outdoor installations and indoor facilities. Each solution is built to support the evolving needs of telecom network providers, OEMs, and infrastructure operators, ensuring compliance with global industry standards and reliable long-term performance.
+          <br /> <br />
+
+          Our enclosures feature advanced thermal management systems, high ingress protection (IP) ratings, and enhanced physical security to guard against environmental stress, vandalism, and unauthorised access. Designed for maximum equipment uptime, Dataracks streetside telecom cabinets and indoor rack solutions provide secure, scalable platforms for active and passive network components—ensuring consistent performance across all deployment environments.
+        </p>
+        <div className='md:flex gap-4 my-6 text-center'>
+          <div>
+            <img src="/images/dataracks-rail-solutions/dataracks-indoor-racks-cabinets1.jpg" alt="" className='w-full' />
+            <p className="my-3">Indoor Racks & Cabinets</p>
+          </div>
+          <div>
+            <img src="/images/dataracks-rail-solutions/dataracks-outdoor-cabinets.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            <p className="my-3">Street Cabinets</p>
+          </div>
+        </div>
+      </div>
+    )
   },
   {
     title: "Mobile Telecom Solutions",
-    image: "dataracks-mobile-telecom-solutions.jpg"
+    image: "dataracks-mobile-telecom-solutions.jpg",
+    content: (
+      <div>
+        <p className='my-6 text-[#0F0765] text-3xl font-light'>Future-ready mobile telecom solutions</p>
+        <p>
+          We offer comprehensive UK-based production of vendor-independent cabinets, enclosures, and open-frame systems designed to meet the evolving demands of the telecoms industry. Our manufacturing capabilities support both outdoor and indoor applications, covering the full spectrum of mobile and wireless network technologies including GSM, GSM-R, LTE, 3G, 4G, 5G Radio Access Networks (RAN), WiMAX, and Wi-Fi.
+          <br /> <br />
+          With a deep understanding of the challenges facing network operators and equipment providers, we design and engineer enclosure solutions that combine innovation, strength, and functionality. Every product we produce reflects our commitment to performance and durability, ensuring reliable operation in a wide range of environmental and operational conditions.
+          <br /> <br />
+
+          Our outdoor telecom street cabinets are purpose-built to protect vital network equipment from the elements while maintaining consistent thermal performance. Each cabinet incorporates advanced cooling options, precise environmental control, and a design that delivers effective ingress protection (IP) against dust, water, and other contaminants.
+          <br /> <br />
+
+          For indoor applications, our 19-inch telecom racks provide a secure and organised platform for housing essential telecoms and networking components. Engineered for accessibility, load capacity, and airflow, these racks help optimise performance while simplifying equipment integration and maintenance.
+          <br /> <br />
+
+          Every enclosure and rack we manufacture is built with security and resilience in mind. From vandal-resistant construction to rigorous testing and compliance with industry standards, we ensure our solutions safeguard your infrastructure and sustain network performance—today and into the future.
+        </p>
+        <div className='md:flex gap-4 my-6 text-center'>
+          <div>
+            <img src="/images/dataracks-rail-solutions/dataracks-indoor-racks-cabinets1.jpg" alt="" className='w-full' />
+            <p className="my-3">Indoor Racks & Cabinets</p>
+          </div>
+          <div>
+            <img src="/images/dataracks-rail-solutions/dataracks-outdoor-cabinets.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            <p className="my-3">Street Cabinets</p>
+          </div>
+        </div>
+      </div>
+    )
   },
   {
     title: "Defense Solutions",
-    image: "dataracks-defense-solutions.jpg"
+    image: "dataracks-defense-solutions.jpg",
+    content: (
+      <div>
+        <p className='my-6 text-[#0F0765] text-3xl font-light'>Advanced Enclosure Solutions for Defence Applications</p>
+        <p>
+          Dataracks designs and manufactures robust enclosure systems tailored for defence settings, built to withstand electromagnetic attacks, cyber threats, and severe environmental stressors.
+          <br /> <br />
+          Working to exacting MIL-STD and DEF-STAN requirements, we support Ministry of Defence primes and their supply chains with solutions that meet formal defence procurement standards. Our approach blends advanced engineering, pragmatic COTS value-engineering and proven high-volume production methods to deliver cost-effective, military-grade hardware.
+          <br /> <br />
+
+          The portfolio covers a broad spectrum of defence needs: shipboard and airborne cabinets, command-and-control consoles, naval housings, TEMPEST/EMP/EMI shielded racks, low-magnetic cabinets and SATCOM enclosures. Each product is purpose-designed for long-term reliability in environments featuring high temperatures, salt spray, vibration and intense electromagnetic activity.
+          <br /> <br />
+
+          For naval electronics, we produce rugged enclosures for LANs, satellite communications and weapons systems that tolerate the rigours of life at sea while maintaining secure performance.
+          <br /> <br />
+
+          Additionally, our Vanquish series offers modular, ready-to-deploy indoor racks and cabinets that simplify expansion and modernisation of telecom infrastructure without excessive cost or lead time.
+        </p>
+        <div className='md:flex gap-4 my-6 text-center'>
+          <div>
+            <img src="/images/dataracks-rail-solutions/dataracks-naval-enclosures1.jpg" alt="" className='w-full' />
+            <p className="my-3">Naval Enclosures</p>
+          </div>
+          <div>
+            <img src="/images/dataracks-rail-solutions/dataracks-land-and-infrastructure-systems1.jpg" alt="" className='w-full md:mt-0 mt-4' />
+            <p className="my-3">Land & Infrastructure Systems</p>
+          </div>
+        </div>
+      </div>
+    )
   }
 ]
+
+export function stringToSlug(text: string): string {
+  return text
+    .toLowerCase() // convert to lowercase
+    .trim() // remove leading/trailing spaces
+    .replace(/[^a-z0-9\s-]/g, '') // remove non-alphanumeric chars
+    .replace(/\s+/g, '-') // replace spaces with hyphens
+    .replace(/-+/g, '-'); // collapse multiple hyphens
+}
 
 export default function Home() {
 
@@ -64,14 +250,7 @@ export default function Home() {
     "Delivery & Installation"
   ];
 
-  function stringToSlug(text: string): string {
-    return text
-      .toLowerCase() // convert to lowercase
-      .trim() // remove leading/trailing spaces
-      .replace(/[^a-z0-9\s-]/g, '') // remove non-alphanumeric chars
-      .replace(/\s+/g, '-') // replace spaces with hyphens
-      .replace(/-+/g, '-'); // collapse multiple hyphens
-  }
+  
   return <>
     <Hero />
 
@@ -112,10 +291,12 @@ export default function Home() {
               alt={single.title}
               className="w-full h-full object-cover"
             />
-            <div className="flex absolute justify-between w-full right-0 left-0 bottom-0 p-4 text-white">
-              <p className="text-xl w-1/2">{single.title}</p>
-              <MoveRight />
-            </div>
+            <Link to={`/solutions/${stringToSlug(single.title)}`}>
+              <div className="flex absolute justify-between w-full right-0 left-0 bottom-0 p-4 text-white">
+                <p className="text-xl w-1/2">{single.title}</p>
+                <MoveRight />
+              </div>
+            </Link>
           </div>
         ))}
       </div>

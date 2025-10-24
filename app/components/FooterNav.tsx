@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { solutions } from "~/routes/home";
+import { solutions, stringToSlug } from "~/routes/home";
 import { allProducts } from "~/routes/products";
 
 const FooterNav = () => (
@@ -12,7 +12,7 @@ const FooterNav = () => (
             <div>
                 <h4 className=" mb-3 text-[#595853]">Solutions</h4>
                 <ul className="space-y-3 ">
-                    {solutions.map((siglee, index) => <li><Link to="/">{siglee.title}</Link></li>)}
+                    {solutions.map((siglee, index) => <li><Link to={`/solutions/${stringToSlug(siglee.title)}`}>{siglee.title}</Link></li>)}
 
                 </ul>
             </div>
