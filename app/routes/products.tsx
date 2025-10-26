@@ -36,22 +36,22 @@ export const allProducts = [
     {
         title: "Wallboxes",
         image: "dataracks-wallboxes-product.jpg",
-        slug: ""
+        slug: "/wallboxes"
     },
     {
         title: "Retrofit Solutions",
         image: "dataracks-retrofit-solutions.jpg",
-        slug: ""
+        slug: "/retrofit-solutions"
     },
     {
         title: "Micro Data Centres",
         image: "dataracks-micro-data-centre-products.jpg",
-        slug: ""
+        slug: "/micro-data-centre"
     },
     {
         title: "Electromechanical solutions",
         image: "dataracks-electromechanical-solutions.jpg",
-        slug: ""
+        slug: "/electromechanical-solutions"
     }
 ]
 
