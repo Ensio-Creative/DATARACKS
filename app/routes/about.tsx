@@ -38,8 +38,8 @@ const about = () => {
   return (
     <>
       <Hero title="About Us" image='/images/about-img.jpg' />
-      <div className='flex'>
-        <div className='p-32 w-1/2'>
+      <div className='lg:flex lg:mt-0 mt-20'>
+        <div className='lg:p-32 lg:w-1/2 p-4'>
           <p className='md:text-5xl text-3xl font-light'>About Dataracks</p>
 
           <p className='text-[#595853]'>From pioneering products to leading designs, Dataracks has provided a range of solutions to our clients for over 35 years.
@@ -48,7 +48,7 @@ const about = () => {
             <br /> <br />
             We’re immensely proud of our achievements in the industry and continue to  innovate, setting new standards in data centre solutions.</p>
         </div>
-        <div className='w-1/2 bg-[#F5F5F5] p-20'>
+        <div className='lg:w-1/2 bg-[#F5F5F5] lg:p-20 p-4'>
           <div className='flex flex-col gap-8'>
             <div className=' py-4'>
               <p className='text-7xl font-light'>35+</p>
@@ -65,7 +65,7 @@ const about = () => {
           </div>
         </div>
       </div>
-      <div className='relative py-40 my-32'>
+      <div className='relative py-40 lg:my-32 overflow-hidden'>
         <img className='max-w-5xl left-0 right-0 mx-auto absolute top-0 bottom-0 my-auto z-10' src="/images/dataracks-about.jpg" alt="" />
 
         <Marquee>
