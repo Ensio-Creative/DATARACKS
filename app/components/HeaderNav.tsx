@@ -125,6 +125,9 @@ const HeaderNav = () => {
                     <Link to="/about" className="hover:text-primary transition">
                         About us
                     </Link>
+                    <Link to="#" className="hover:text-primary transition">
+                        News
+                    </Link>
                     <Link to="/contact" className="hover:text-primary transition">
                         Contact us
                     </Link>
@@ -212,6 +215,9 @@ const HeaderNav = () => {
                                 <Link to="/about" onClick={() => setMenuOpen(false)}>
                                     About us
                                 </Link>
+                            </li>
+                            <li className="text-2xl font-light border-b border-gray-200 pb-2">
+                                <Link to="#" onClick={() => setMenuOpen(false)}>News</Link>
                             </li>
                             <li className="text-2xl font-light border-b border-gray-200 pb-2">
                                 <Link to="/contact" onClick={() => setMenuOpen(false)}>
