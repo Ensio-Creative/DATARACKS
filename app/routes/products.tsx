@@ -23,11 +23,11 @@ export const allProducts = [
         slug: "/aisle-containment"
 
     },
-    {
-        title: "Server & Network Cabinets",
-        image: "dataracks-home-server-cabinets-products.jpg",
-        slug: "/server-cabinets"
-    },
+    // {
+    //     title: "Server & Network Cabinets",
+    //     image: "dataracks-home-server-cabinets-products.jpg",
+    //     slug: "/server-cabinets"
+    // },
     {
         title: "Cabinet Accessories",
         image: "dataracks-cabinet.jpg",
@@ -43,11 +43,11 @@ export const allProducts = [
         image: "dataracks-retrofit-solutions.jpg",
         slug: "/retrofit-solutions"
     },
-    {
-        title: "Micro Data Centres",
-        image: "dataracks-micro-data-centre-products.jpg",
-        slug: "/micro-data-centre"
-    },
+    // {
+    //     title: "Micro Data Centres",
+    //     image: "dataracks-micro-data-centre-products.jpg",
+    //     slug: "/micro-data-centre"
+    // },
     {
         title: "Electromechanical solutions",
         image: "dataracks-electromechanical-solutions.jpg",
@@ -68,10 +68,10 @@ const products = () => {
             </section>
 
             <section className='max-w-7xl mx-auto my-20 px-4'>
-                <div className="grid md:grid-cols-4 gap-4">
+                <div className="grid md:grid-cols-3 gap-4">
                     {allProducts.map((single, index) => <div key={index}>
                         <Link to={`/products${single.slug}`}>
-                            <img src={`/images/products/${single.image}`} alt="" />
+                            <img src={`/images/products/${single.image}`} className='w-full object-cover' alt="" />
                             <p className='text-2xl my-4 font-light'>{single.title}</p>
                         </Link>
                     </div>)}

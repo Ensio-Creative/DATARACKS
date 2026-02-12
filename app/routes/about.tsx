@@ -150,7 +150,7 @@ const about = () => {
 
           </div>
           <div>
-            {["Unmatched Expertise: Over 25 years in the industry.",
+            {["Unmatched Expertise: Over 30 years in the industry.",
               "Proven Track Record: Successful implementations across a wide range of industries.",
               "Innovative Solutions: Cutting-edge designs tailored to meet the demands of modern data centres.",
               "Exceptional Customer Service: Dedicated support from consultation no completion"].map((point, index) => (

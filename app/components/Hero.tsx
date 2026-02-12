@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const Hero = ({ image, title }: { image?: string; title?: string }) => {
     return (!title ?
         <section className="bg-[#B5B7D2] text-white relative">
@@ -9,9 +11,11 @@ const Hero = ({ image, title }: { image?: string; title?: string }) => {
                 <h1 className="text-4xl md:text-5xl md:w-1/2 leading-snug">
                     Precision-Engineered Data Centre Solutions, Built in the UK
                 </h1>
-                <button className="mt-auto border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-[#3B3B3B] transition">
-                    Explore our products
-                </button>
+                <Link to={'/products'}>
+                    <button className="mt-auto border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-[#3B3B3B] capitalize transition">
+                        Explore our products
+                    </button>
+                </Link>
             </div>
         </section> : <section className="relative bg-cover bg-center" style={{ backgroundImage: `url(${image})` }}>
             <div className="absolute inset-0 bg-[#0F07654D]"></div>
