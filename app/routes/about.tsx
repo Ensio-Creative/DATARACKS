@@ -40,7 +40,7 @@ const about = () => {
       <Hero title="About Us" image='/images/about-img.jpg' />
       <div className='lg:flex lg:mt-0 mt-20'>
         <div className='lg:p-32 lg:w-1/2 p-4'>
-          <p className='md:text-5xl text-3xl font-light'>About Dataracks</p>
+          <p className='md:text-5xl text-3xl mb-2 font-light'>About Dataracks</p>
 
           <p className='text-[#595853]'>From pioneering products to leading designs, Dataracks has provided a range of solutions to our clients for over 35 years.
             <br /> <br />
@@ -48,11 +48,11 @@ const about = () => {
             <br /> <br />
             We’re immensely proud of our achievements in the industry and continue to  innovate, setting new standards in data centre solutions.</p>
         </div>
-        <div className='lg:w-1/2 bg-[#F5F5F5] lg:p-20 p-4'>
+        <div className='lg:w-1/2 bg-[#F5F5F5] lg:mt-0 mt-4 lg:p-20 p-4'>
           <div className='flex flex-col gap-8'>
             <div className=' py-4'>
               <p className='text-7xl font-light'>35+</p>
-              <p className='text-xs text-[#595853]'>Years of experience</p>
+              <p className='text-xs text-[#595853]'>Years of Experience</p>
             </div>
             <div className='border-t border-t-[#0F0765] py-4'>
               <p className='text-7xl font-light'>1000+</p>
@@ -60,7 +60,7 @@ const about = () => {
             </div>
             <div className='border-t border-t-[#0F0765] py-4'>
               <p className='text-7xl font-light'>12</p>
-              <p className='text-xs text-[#595853]'>Industry awards</p>
+              <p className='text-xs text-[#595853]'>Industry Awards</p>
             </div>
           </div>
         </div>

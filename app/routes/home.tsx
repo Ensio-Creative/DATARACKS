@@ -340,7 +340,7 @@ export default function Home() {
       <h1 className="md:text-5xl text-3xl font-light text-center">From server cabinets to aisle containment and security cages, Dataracks designs and manufactures complete data centre solutions engineered for performance, efficiency, and sustainability.</h1>
     </section> */}
 
-    <section className="bg-[#F5F5F5] py-20">
+    <section className="bg-[#F5F5F5] pt-20 lg:pb-20">
       <div className="relative">
         <img
           src="/images/dataracks-story.jpg"
@@ -370,6 +370,8 @@ export default function Home() {
             className={`relative ${index === 0 || index === 3 ? "col-span-3" : "md:col-span-2 col-span-3"
               }`}
           >
+            <div className="absolute inset-0 bg-[#0F076559]"></div>
+
             <img
               src={`/images/solutions/${single.image}`}
               alt={single.title}
@@ -484,14 +486,14 @@ export default function Home() {
       <div className="absolute inset-0 bg-[#0F0765CC]"></div>
 
       {/* Content */}
-      <div className="relative max-w-xl mx-auto text-center py-32 text-white">
+      <div className="relative max-w-xl lg:mx-auto mx-4 text-center py-32 text-white">
         <h1 className="text-4xl font-light">
           Don’t Just Take
           Our <br /> Word For It
         </h1>
         <p>Read what our clients have to say.</p>
 
-        <div className="text-[#0F0765] mt-10 bg-[#EAF4FF] p-16">
+        <div className="text-[#0F0765] mt-10 bg-[#EAF4FF] lg:p-16 p-10">
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
@@ -501,7 +503,7 @@ export default function Home() {
             pagination={{ clickable: true }}
           >
             <SwiperSlide>
-              <div className="h-58">
+              <div className="lg:h-58 lg:pb-0 pb-4">
                 <p className="text-xl font-light">
                   I received a very large supply and install of cold aisle containment from Dataracks.
                   Very happy with the quality, price and customer service. Good work team!
@@ -511,7 +513,7 @@ export default function Home() {
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className=" h-58">
+              <div className="lg:h-58 lg:pb-0 pb-4">
                 <p className="text-xl font-light">
                   We are extremely satisfied with the high-quality products and exceptional service provided by Dataracks UK.
                   We highly recommend them for their reliability and professionalism.
