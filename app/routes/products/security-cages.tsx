@@ -92,7 +92,7 @@ const SecurityCages = () => {
                         <li>Fire Safety Compliance: Built to integrate with fire suppression systems, ensuring safety without compromising security.</li>
                     </ul>
                 </div>
-                <div className='bg-[#F5F5F5] md:px-24 md:py-24 px-4 pt-10'>
+                <div className='bg-[#F5F5F5] md:px-24 md:py-24 pb-10 px-4 pt-10'>
                     <p className='text-md:5xl text-3xl font-light'>Installation & Support</p>
                     <p className='my-4 text-[#595853]'>Our dedicated team provides a seamless installation experience with full support throughout the process:</p>
                     <ul className='text-[#595853] space-y-3 mt-4 list-disc ml-4'>

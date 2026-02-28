@@ -30,7 +30,7 @@ const contact = () => {
                                 United Kingdom
                             </p>
                             <div className='mt-4 md:mt-0'>
-                                <p>T: +44(0)1954 232020</p>
+                                <p>T: +44(0)1954252800</p>
                                 <p>E: sales@dataracks.co.uk</p>
                             </div>
                         </div>

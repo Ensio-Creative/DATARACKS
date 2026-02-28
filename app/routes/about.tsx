@@ -42,7 +42,7 @@ const about = () => {
         <div className='lg:p-32 lg:w-1/2 p-4'>
           <p className='md:text-5xl text-3xl mb-2 font-light'>About Dataracks</p>
 
-          <p className='text-[#595853]'>From pioneering products to leading designs, Dataracks has provided a range of solutions to our clients for over 35 years.
+          <p className='text-[#595853] mt-6'>From pioneering products to leading designs, Dataracks has provided a range of solutions to our clients for over 35 years.
             <br /> <br />
             We introduced the industry’s first purpose-built data racks in 1989. Then, we rewrote the book on data centre cooling and efficiency in 2007 with  our cold aisle containment solutions.
             <br /> <br />

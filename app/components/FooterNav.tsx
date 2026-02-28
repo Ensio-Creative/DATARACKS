@@ -6,25 +6,27 @@ const FooterNav = () => (
     <footer className="bg-[#EAF4FF] py-10">
         <div className="max-w-7xl my-18 px-4 mx-auto grid md:grid-cols-5 gap-10 text-[#0F0765]">
             <div className="">
-                <img src="/images/dataracks-logo2.svg" alt="Dataracks" className="w-44 mb-4" />
+                <Link to="/">
+                    <img src="/images/dataracks-logo2.svg" alt="Dataracks" className="w-44 mb-4" />
+                </Link>
             </div>
 
             <div>
-                <h4 className=" mb-3 text-[#595853]">Solutions</h4>
-                <ul className="space-y-3 ">
+                <h4 className=" mb-3 text-[#595853] uppercase">Solutions</h4>
+                <ul className="space-y-3 capitalize">
                     {solutions.map((siglee, index) => <li key={siglee.title + index}><Link to={`/solutions/${stringToSlug(siglee.title)}`}>{siglee.title}</Link></li>)}
 
                 </ul>
             </div>
 
             <div>
-                <h4 className=" mb-3 text-[#595853]">Products</h4>
-                <ul className="space-y-3">
+                <h4 className=" mb-3 text-[#595853] uppercase">Products</h4>
+                <ul className="space-y-3 capitalize">
                     {allProducts.map((single, index) => <li key={single.title + index}><Link to={`/products${single.slug}`}>{single.title}</Link></li>)}
                 </ul>
             </div>
             <div>
-                <h4 className=" mb-3 text-[#595853]">Company</h4>
+                <h4 className=" mb-3 text-[#595853] uppercase">Company</h4>
                 <ul className="space-y-3 ">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About us</Link></li>
@@ -34,7 +36,7 @@ const FooterNav = () => (
                 </ul>
             </div>
             <div>
-                <h4 className=" mb-3 text-[#595853]">Connect with Us</h4>
+                <h4 className=" mb-3 text-[#595853] uppercase">Connect with Us</h4>
                 <ul className="space-y-3">
                     <li><a href="https://x.com/dataracksuk" target="_blank">X (Twitter)</a></li>
                     <li><a href="https://www.linkedin.com/company/dataracks" target="_blank">LinkedIn</a></li>

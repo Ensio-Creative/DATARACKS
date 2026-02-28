@@ -218,12 +218,11 @@ export const solutions = [
       <div>
         <p className='my-6 text-[#0F0765] text-4xl font-light'>Fixed Telecom Infrastructure Solutions</p>
         <p>
-          Dataracks provides advanced telecom enclosure solutions engineered to meet the demands of modern fixed network infrastructure. Our product range includes outdoor telecom cabinets, streetside broadband enclosures for FTTx networks such as FTTP, FTTC, and FTTH, as well as indoor 19” rack systems, overhead cable management, and hot and cold aisle containment systems for high-performance data environments.
+          Dataracks provides advanced telecom enclosure solutions engineered to meet the demands of modern fixed network infrastructure. Our product range includes outdoor telecom cabinets, streetside broadband enclosures, overhead cable management, and hot and cold aisle containment systems for high-performance data environments.
           <br /> <br />
           We specialise in the design and manufacture of durable, precision-engineered enclosures that protect critical telecom and networking equipment in both remote outdoor installations and indoor facilities. Each solution is built to support the evolving needs of telecom network providers, OEMs, and infrastructure operators, ensuring compliance with global industry standards and reliable long-term performance.
           <br /> <br />
-
-          Our enclosures feature advanced thermal management systems, high ingress protection (IP) ratings, and enhanced physical security to guard against environmental stress, vandalism, and unauthorised access. Designed for maximum equipment uptime, Dataracks streetside telecom cabinets and indoor rack solutions provide secure, scalable platforms for active and passive network components—ensuring consistent performance across all deployment environments.
+          Our enclosures feature advanced thermal management systems and enhanced physical security to guard against environmental stress, vandalism, and unauthorised access. Designed for maximum equipment uptime, Dataracks telecom cabinets and indoor rack solutions provide secure, scalable platforms for active and passive network components—ensuring consistent performance across all deployment environments.
         </p>
         {/* <div className='md:flex gap-4 my-6 text-center'>
           <div>
@@ -378,9 +377,9 @@ export default function Home() {
               className="w-full lg:h-96 object-cover"
             />
             <Link to={`/solutions/${stringToSlug(single.title)}`}>
-              <div className="flex absolute justify-between w-full right-0 left-0 bottom-0 p-4 text-white">
+              <div className="flex absolute justify-between w-full right-4 left-4 bottom-4 p-6 text-white">
                 <p className="text-xl w-1/2">{single.title}</p>
-                <MoveRight />
+                {/* <MoveRight /> */}
               </div>
             </Link>
           </div>
@@ -392,7 +391,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto p-4">
         <div>
           <h3 className="text-4xl font-light mb-4">Our Services</h3>
-          <p className="text-[#595853]">From design to installation, we provide an end-to-end services <br />
+          <p className="text-[#595853] lg:w-1/2">From design to installation, we provide an end-to-end services
             for performance, efficiency, and sustainability.</p>
         </div>
 
@@ -400,7 +399,7 @@ export default function Home() {
           {services.map((single, index) => <div key={index} className="bg-white p-8">
             <p className="text-xl text-[#595853] font-light">{single}</p>
 
-            <Link to={'/services'}>
+            <Link to={'/services#' + stringToSlug(single)}>
               <button className="flex gap-4 mt-32">
                 <span>Explore</span>
                 <ArrowRight className="" />
@@ -416,7 +415,7 @@ export default function Home() {
     <section className="py-20">
       <div className="text-center p-4">
         <h3 className="text-4xl font-light mb-4">Trusted by Top Companies</h3>
-        <p className="text-[#595853]">We have blue-chip client base, which includes major names in <br /> the IT and telecoms sectors.</p>
+        <p className="text-[#595853] lg:w-[40%] mx-auto">We have blue-chip client base, which includes major names in the IT and telecoms sectors.</p>
       </div>
 
       <div className="overflow-hidden w-full mt-10 flex justify-center">

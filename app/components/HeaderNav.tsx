@@ -8,15 +8,27 @@ const HeaderNav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isProductsOpen, setIsProductsOpen] = useState(false);
-    const [isSolutionsOpen, setIsSolutionssOpen] = useState(false)
+    const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
+    // Mobile-specific dropdown states
+    const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
+    const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false);
 
     const location = useLocation();
 
     useEffect(() => {
         if (location.pathname.includes("/solutions")) {
             setIsScrolled(true);
+        } else {
+            setIsScrolled(window.scrollY > 20);
         }
-    }, [location.pathname, isScrolled]);
+    }, [location.pathname]);
+
+    // Close mobile menu / collapse mobile dropdowns when navigating
+    useEffect(() => {
+        setMenuOpen(false);
+        setIsMobileProductsOpen(false);
+        setIsMobileSolutionsOpen(false);
+    }, [location.pathname]);
 
     // Track scroll position
     useEffect(() => {
@@ -54,7 +66,7 @@ const HeaderNav = () => {
 
                     <div
                         className="group"
-                        onMouseEnter={() => { setIsSolutionssOpen(true), setIsProductsOpen(false) }}
+                        onMouseEnter={() => { setIsSolutionsOpen(true); setIsProductsOpen(false); }}
                     >
                         <button className="hover:text-primary transition flex items-center space-x-1">
                             {/* <Link to="/products" className="flex gap-1"> */}
@@ -64,7 +76,7 @@ const HeaderNav = () => {
                             {/* </Link> */}
                         </button>
                         {isSolutionsOpen && (
-                            <div onMouseLeave={() => setIsSolutionssOpen(false)}
+                            <div onMouseLeave={() => setIsSolutionsOpen(false)}
                                 className="absolute left-0 right-0 top-full w-screen bg-white shadow-lg border-t border-[#CFCFCF]">
                                 <div className="max-w-7xl mx-auto py-8 flex justify-between gap-4">
                                     <div className="w-[30%]">
@@ -90,8 +102,8 @@ const HeaderNav = () => {
                     <div
                         className=" group"
                         onMouseEnter={() => {
-                            setIsProductsOpen(true),
-                                setIsSolutionssOpen(false)
+                            setIsProductsOpen(true);
+                            setIsSolutionsOpen(false);
                         }}
                     >
                         <button className="hover:text-primary transition flex items-center space-x-1">
@@ -139,6 +151,7 @@ const HeaderNav = () => {
                     className={`md:hidden p-2 rounded focus:outline-none transition z-50 ${isScrolled || menuOpen ? "text-gray-800" : "text-white"
                         }`}
                     aria-label="Toggle menu"
+                    aria-expanded={menuOpen}
                 >
                     {menuOpen ? "Close" : "Menu"}
                 </button>
@@ -155,7 +168,7 @@ const HeaderNav = () => {
                             </button>
                         </div> */}
 
-                        <p className="text-gray-500 text-sm mb-2 mt-20">Navigation</p>
+                        <p className="text-gray-500 text-sm uppercase mb-2 mt-20">Navigation</p>
                         <hr className="mb-4 border-gray-300" />
 
                         <ul className="space-y-6 text-[#0F0765]">
@@ -166,24 +179,26 @@ const HeaderNav = () => {
                             </li>
 
                             <li className="text-2xl font-light border-b border-gray-200 pb-2">
+                                <div>
+                                    <button
+                                        className="flex justify-between items-center w-full"
+                                        onClick={() => setIsMobileSolutionsOpen((v) => !v)}
+                                        aria-expanded={isMobileSolutionsOpen}
+                                    >
+                                        <span className="text-2xl">Solutions</span>
+                                        <span className="text-3xl">{isMobileSolutionsOpen ? "−" : "+"}</span>
+                                    </button>
 
-                                <details open={isSolutionsOpen} onToggle={() => setIsSolutionssOpen(!isSolutionsOpen)}>
-                                    <summary className="flex justify-between items-center cursor-pointer">
-                                        <span>
-                                            <p>
-                                                Solutions
-                                            </p>
-                                        </span>
-                                        <span className="text-3xl">{isSolutionsOpen ? "−" : "+"}</span>
-                                    </summary>
-                                    <ul className="mt-3 space-y-3 text-base">
-                                        {solutions.map((single) => <li key={single.title} >
-                                            <Link onClick={() => setMenuOpen(false)} to={`/solutions/${stringToSlug(single.title)}`}>{single.title}</Link>
-                                        </li>
-                                        )}
-
-                                    </ul>
-                                </details>
+                                    {isMobileSolutionsOpen && (
+                                        <ul className="mt-3 space-y-3 text-base">
+                                            {solutions.map((single) => (
+                                                <li key={single.title}>
+                                                    <Link onClick={() => { setMenuOpen(false); setIsMobileSolutionsOpen(false); }} to={`/solutions/${stringToSlug(single.title)}`}>{single.title}</Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
                             </li>
                             <li className="text-2xl font-light border-b border-gray-200 pb-2">
                                 <Link to="/services" onClick={() => setMenuOpen(false)}>
@@ -192,23 +207,30 @@ const HeaderNav = () => {
                             </li>
 
                             <li className="text-2xl font-light border-b border-gray-200 pb-2">
-                                <details open={isProductsOpen} onToggle={() => setIsProductsOpen(!isProductsOpen)}>
-                                    <summary className="flex justify-between items-center cursor-pointer">
-                                        <span>
-                                            <Link to="/products" onClick={() => setMenuOpen(false)}>
-                                                Products
-                                            </Link>
-                                        </span>
-                                        <span className="text-3xl">{isProductsOpen ? "−" : "+"}</span>
-                                    </summary>
-                                    <ul className="mt-3 space-y-3 text-base">
-                                        {allProducts.map((single) => <li key={single.title} >
-                                            <Link onClick={() => setMenuOpen(false)} to={`/products${single.slug}`}>{single.title}</Link>
-                                        </li>
-                                        )}
+                                <div>
+                                    <div className="flex justify-between items-center">
+                                        <Link to="/products" onClick={() => setMenuOpen(false)}>
+                                            Products
+                                        </Link>
+                                        <button
+                                            className="text-3xl"
+                                            onClick={() => setIsMobileProductsOpen((v) => !v)}
+                                            aria-expanded={isMobileProductsOpen}
+                                        >
+                                            {isMobileProductsOpen ? "−" : "+"}
+                                        </button>
+                                    </div>
 
-                                    </ul>
-                                </details>
+                                    {isMobileProductsOpen && (
+                                        <ul className="mt-3 space-y-3 text-base">
+                                            {allProducts.map((single) => (
+                                                <li key={single.title}>
+                                                    <Link onClick={() => { setMenuOpen(false); setIsMobileProductsOpen(false); }} to={`/products${single.slug}`}>{single.title}</Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
                             </li>
 
                             <li className="text-2xl font-light border-b border-gray-200 pb-2">
@@ -227,8 +249,8 @@ const HeaderNav = () => {
                         </ul>
                     </div>
 
-                    <div className="text-[#0F0765] text-sm space-y-2">
-                        <p>T: +44(0)1954 252800</p>
+                    <div className="text-[#0F0765] text-sm space-y-2 mb-10">
+                        <p>T: +44(0)1954252800</p>
                         <p>E: sales@dataracks.co.uk</p>
                     </div>
                 </div>
