@@ -40,7 +40,7 @@ const about = () => {
       <Hero title="About Us" image='/images/about-img.jpg' />
       <div className='lg:flex lg:mt-0 mt-20'>
         <div className='lg:p-32 bg-[#F5F5F5] lg:w-[60%] p-4'>
-          <p className='md:text-5xl text-3xl mb-2 font-light'>About Dataracks</p>
+          <p className='md:text-5xl text-3xl mb-2 font-light'>A Proven Legacy in Data Center Excellence</p>
 
           <p className='text-[#595853] mt-6'>From pioneering products to leading designs, Dataracks has provided a range of solutions to our clients for over 35 years.
             <br /> <br />
