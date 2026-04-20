@@ -38,9 +38,9 @@ const about = () => {
   return (
     <>
       <Hero title="About Us" image='/images/about-img.jpg' />
-      <div className='lg:flex lg:mt-0 mt-20'>
+      <div className='lg:flex'>
         <div className='lg:p-32 bg-[#F5F5F5] lg:w-[60%] p-4'>
-          <p className='md:text-5xl text-3xl mb-2 font-light'>A Proven Legacy in Data Center Excellence</p>
+          <p className='md:text-5xl text-3xl mb-2 lg:mt-0 mt-20 font-light'>A Proven Legacy in Data Center Excellence</p>
 
           <p className='text-[#595853] mt-6'>From pioneering products to leading designs, Dataracks has provided a range of solutions to our clients for over 35 years.
             <br /> <br />
@@ -65,7 +65,7 @@ const about = () => {
           </div>
         </div>
       </div>
-      <div className='relative py-0 my-32 overflow-hidden'>
+      <div className='relative py-0 lg:my-32 lg:pt-0 pt-20 overflow-hidden'>
         {/* <img className='max-w-5xl left-0 right-0 mx-auto absolute top-0 bottom-0 my-auto z-10' src="/images/dataracks-about.jpg" alt="" /> */}
 
         <Marquee>
@@ -150,12 +150,14 @@ const about = () => {
 
           </div>
           <div>
-            {["Unmatched Expertise: Over 30 years in the industry.",
-              "Proven Track Record: Successful implementations across a wide range of industries.",
-              "Innovative Solutions: Cutting-edge designs tailored to meet the demands of modern data centres.",
-              "Exceptional Customer Service: Dedicated support from consultation no completion"].map((point, index) => (
+            {[
+              { label: "Unmatched Expertise", desc: "Over 30 years in the industry." },
+              { label: "Proven Track Record", desc: "Successful implementations across a wide range of industries." },
+              { label: "Innovative Solutions", desc: "Cutting-edge designs tailored to meet the demands of modern data centres." },
+              { label: "Exceptional Customer Service", desc: "Dedicated support from consultation no completion" }
+            ].map((point, index) => (
                 <div key={index} className='flex items-start border-y border-y-[#CFCFCF] py-4'>
-                  <p className='text-[#595853]'>{point}</p>
+                  <p className='text-[#595853]'><strong>{point.label}:</strong> {point.desc}</p>
                 </div>
               ))}
           </div>
