@@ -39,7 +39,7 @@ const FooterNav = () => (
                 <h4 className=" mb-3 text-[#0F0765] font-bold uppercase">Connect with Us</h4>
                 <ul className="space-y-3">
                     <li><a href="https://x.com/dataracksuk" target="_blank">X (Twitter)</a></li>
-                    <li><a href="https://www.linkedin.com/company/dataracks" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.linkedin.com/company/dataracks-uk/" target="_blank">LinkedIn</a></li>
                 </ul>
             </div>
         </div>
