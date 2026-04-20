@@ -15,7 +15,7 @@ import Marquee from "react-fast-marquee";
 export function meta({ }: Route.MetaArgs) {
   return [
     {
-      title: "Dataracks | Data center and telecom solutions"
+      title: "Dataracks | UK Manufacturer of Data Centre & Telecom Solutions"
     },
   ];
 }
