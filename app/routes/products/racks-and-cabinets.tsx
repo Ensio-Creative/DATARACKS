@@ -40,12 +40,12 @@ const ServerCabinets = () => {
                     <li>UK-built to the highest standards with best practice airflow and security incorporated in the design</li>
                     <li>EU code of conduct airflow compliant comes bundled with air dams, infill plates and blanking panels as standard (blanking panels not fitted)</li>
                     <li>Optional Highflow vented steel doors for maximum air flow</li>
-                    <li>Painted Ash Grey to help improve</li>
+                    <li>Painted Ash Grey to help improve lighting and visibility (other colours available)</li>
                 </ul>
-                <div className='grid grid-cols-3 gap-4 mt-12'>
-                    <img src="/images/server-cabinets/dataracks-303-eco-cabinets-1.jpg" alt="" />
-                    <img src="/images/server-cabinets/dataracks-303-eco-cabinets-2.jpg" alt="" />
-                    <img src="/images/server-cabinets/dataracks-303-eco-cabinets-3.jpg" alt="" />
+                <div className='lg:grid grid-cols-3 gap-4 mt-12'>
+                    <img className='mx-auto' src="/images/server-cabinets/dataracks-303-eco-cabinets-1.jpg" alt="" />
+                    <img className='mx-auto' src="/images/server-cabinets/dataracks-303-eco-cabinets-2.jpg" alt="" />
+                    <img className='mx-auto' src="/images/server-cabinets/dataracks-303-eco-cabinets-3.jpg" alt="" />
                 </div>
             </div>
             ),
