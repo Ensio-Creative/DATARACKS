@@ -231,7 +231,7 @@ const ServerCabinets = () => {
 
     return (
         <>
-            <Hero title="Server Networking Racks" image='/images/dataracks-server-cabinets-header.jpg' />
+            <Hero title="Racks & Cabinets" image='/images/dataracks-server-cabinets-header.jpg' />
             <section className='max-w-7xl mx-auto px-4 py-32'>
                 <div className='grid md:grid-cols-3 gap-6'>
                     {serverData.map((item, index) => (
