@@ -194,7 +194,7 @@ export const solutions = [
           <br /> <br />
           Manufactured entirely within our UK facility, our products are built on proven mechanical and electrical designs, combining flexibility, resilience, and performance for mission-critical applications where uptime and reliability are non-negotiable.
         </p>
-        <div className='md:flex gap-4 my-6 text-center'>
+        {/* <div className='md:flex gap-4 my-6 text-center'>
           <div>
             <div className='border border-[#CFCFCF] flex justify-center p-4 md:h-full'>
               <img src="/images/dataracks-rail-solutions/dataracks-data-centre-racks1.jpg" alt="" className='w-full' />
@@ -207,7 +207,7 @@ export const solutions = [
             </div>
             <p className="my-3">Aisle Containment</p>
           </div>
-        </div>
+        </div> */}
       </div>
     )
   },
@@ -325,10 +325,22 @@ export function stringToSlug(text: string): string {
 export default function Home() {
 
   const services = [
-    "Design",
-    "Manufacturing",
-    "Expert Advise",
-    "Delivery & Installation"
+    {
+      title: "Design",
+      bio: "Bespoke solutions engineered precisely to your space and infrastructure."
+    },
+    {
+      title: "Manufacturing",
+      bio: "Every product built in-house at our UK facility — custom, consistent, and quality-controlled."
+    },
+    {
+      title: "Expert Advise",
+      bio: "35+ years of industry depth, helping you make the right call from the start."
+    },
+    {
+      title: "Delivery & Installation",
+      bio: "From our factory to your floor — handled end-to-end, anywhere in the world."
+    }
   ];
 
 
@@ -396,11 +408,11 @@ export default function Home() {
         </div>
 
         <div className="grid md:grid-cols-4  gap-6 mt-8">
-          {services.map((single, index) => <div key={index} className="bg-white p-8">
-            <p className="text-xl text-[#595853] font-light">{single}</p>
-
-            <Link to={'/services#' + stringToSlug(single)}>
-              <button className="flex gap-4 mt-32">
+          {services.map((single:any, index) => <div key={index} className="bg-white p-8">
+            <p className="text-xl text-[#0F0765] font-light">{single.title}</p>
+            <p className="text-sm text-[#595853] my-10">{single.bio}</p>
+            <Link to={'/services#' + stringToSlug(single.title)}>
+              <button className="flex gap-4">
                 <span>Explore</span>
                 <ArrowRight className="" />
               </button>
@@ -425,7 +437,7 @@ export default function Home() {
               {[
                 "/images/companies/sky-logo.jpg",
                 "/images/companies/vodafone-logo.jpg",
-                "/images/companies/aws-logo.jpg",
+                // "/images/companies/aws-logo.jpg",
                 "/images/companies/data-4-logo.jpg",
                 "/images/companies/airsys-logo.jpg",
                 "/images/companies/datum-logo.jpg",

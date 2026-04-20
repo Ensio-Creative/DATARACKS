@@ -39,7 +39,7 @@ const about = () => {
     <>
       <Hero title="About Us" image='/images/about-img.jpg' />
       <div className='lg:flex lg:mt-0 mt-20'>
-        <div className='lg:p-32 lg:w-1/2 p-4'>
+        <div className='lg:p-32 bg-[#F5F5F5] lg:w-[60%] p-4'>
           <p className='md:text-5xl text-3xl mb-2 font-light'>About Dataracks</p>
 
           <p className='text-[#595853] mt-6'>From pioneering products to leading designs, Dataracks has provided a range of solutions to our clients for over 35 years.
@@ -48,7 +48,7 @@ const about = () => {
             <br /> <br />
             We’re immensely proud of our achievements in the industry and continue to  innovate, setting new standards in data centre solutions.</p>
         </div>
-        <div className='lg:w-1/2 bg-[#F5F5F5] lg:mt-0 mt-4 lg:p-20 p-4'>
+        <div className='lg:w-[40%] bg-[#EAF4FF] lg:mt-0 mt-4 lg:p-20 p-4'>
           <div className='flex flex-col gap-8'>
             <div className=' py-4'>
               <p className='text-7xl font-light'>35+</p>
@@ -66,7 +66,7 @@ const about = () => {
         </div>
       </div>
       <div className='relative py-40 lg:my-32 overflow-hidden'>
-        <img className='max-w-5xl left-0 right-0 mx-auto absolute top-0 bottom-0 my-auto z-10' src="/images/dataracks-about.jpg" alt="" />
+        {/* <img className='max-w-5xl left-0 right-0 mx-auto absolute top-0 bottom-0 my-auto z-10' src="/images/dataracks-about.jpg" alt="" /> */}
 
         <Marquee>
           <p className='md:text-8xl text-4xl font-light'>Data centre and telecom solutions - Data centre and telecom solutions</p>

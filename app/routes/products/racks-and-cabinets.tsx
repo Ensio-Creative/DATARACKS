@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Hero from '~/components/Hero';
 
-import type { Route } from './+types/server-cabinets';
+
 import Modal from '~/components/Modal';
+import type { Route } from './+types/racks-and-cabinets';
 export function meta({ }: Route.MetaArgs) {
     return [
         {
@@ -17,21 +18,35 @@ const ServerCabinets = () => {
 
     const serverData = [
         {
-            title: 'Cabinets & Enclosures',
-            image: '/images/server-cabinets/dataracks-cabinets-&-enclosures.jpg',
+            title: '303 Eco Cabinets',
+            image: '/images/server-cabinets/dataracks-303-eco-cabinets.jpg',
             content: (<div>
-                <p>We design and manufacture a vast range of server rack enclosures and cabinets. <br /> <br />
-                    In 1989, we introduced the industry’s first purpose-built IT server racks. Now, we provide a vast range of server racks and cabinets, we can help  you select the right product to meet your requirements. <br /> <br />
-                    Our server racks and cabinets are highly configurable, with a wide range of bespoke features. Additionally, they are also treated with a  high-quality, durable, and powder-coated finish before leaving our UK  factory. Furthermore, our data server racks and cabinets provide the  following benefits to our customers:</p>
-                <p className='my-6 text-[#0F0765] text-xl'>What are Server rack cabinets and enclosures?</p>
-
-                <p>Server rack cabinets and enclosures play a crucial role in the organisation and security of IT equipment, such as servers and networking devices, within data centres. They offer physical protection, improve airflow for effective cooling,  and facilitate cable management, thereby ensuring the optimal  performance and security of the equipment housed within. Dataracks focuses on providing robust, modular solutions designed to meet the requirements of contemporary data centres.</p>
-                <p className='text-[#0F0765] text-xl my-6'>What are the key benefits of using Dataracks server cabinets
-                    over other brands?</p>
-                <p>Dataracks server cabinets are distinguished by their exceptional durability, modular design that facilitates scalability, and effective cooling systems aimed at enhancing data centre performance. They incorporate advanced security features, sophisticated cable management solutions, and straightforward installation processes, making Dataracks cabinets a dependable and customisable option that surpasses competitors.</p>
-                <p className='text-[#0F0765] text-xl my-6'>What size or configurations of server cabinets are most commonly
-                    used in data centres?</p>
-                <p>The common dimensions of server cabinets utilized in data centres generally range from 42U to 48U in height, featuring a standard width of 19 inches for the installation of equipment. The depth of these cabinets usually varies between 800mm and 1200mm, contingent upon the specific equipment and airflow necessities. Such  configurations are designed to support a diverse array of servers,  networking devices, and cooling systems, thereby offering both  flexibility and scalability to meet the demands of data centres.</p>
+                <p>
+                    The award-winning Dataracks 303 Eco cabinet range is manufactured from steel for maximum structural rigidity and supports best practice cable management. The patented award
+                    winning Eco Server Cabinet that includes a unique twist and lock mechanism. It is suitable for use with virtually all hardware brands without adapting components. Cabinets fully conform with EU recommendations on Energy Efficiency.
+                </p>
+                <p className='my-6 text-[#0F0765] text-xl'>Wide Range</p>
+                <ul className='list-disc ml-4'>
+                    <li>Standard heights 27U, 42U & 48U </li>
+                    <li>Wide variety of custom built heights from 18U to 58U</li>
+                    <li>Four widths 600, 800, 750 and 1000mm</li>
+                    <li>Four standard depths 600, 800, 1000 and 1200mm</li>
+                    <li>Multiple door options, split(wardrobe), colocation, vented glass and vented steel</li >
+                    <li>The 42u cabinet is 1975mm</li>
+                    <li>The 48u cabinet is 2240mm</li>
+                </ul>
+                <p className='my-6 text-[#0F0765] text-xl'>Benefits</p>
+                <ul className='list-disc ml-4'>
+                    <li>UK-built to the highest standards with best practice airflow and security incorporated in the design</li>
+                    <li>EU code of conduct airflow compliant comes bundled with air dams, infill plates and blanking panels as standard (blanking panels not fitted)</li>
+                    <li>Optional Highflow vented steel doors for maximum air flow</li>
+                    <li>Painted Ash Grey to help improve</li>
+                </ul>
+                <div className='grid grid-cols-3 gap-4 mt-12'>
+                    <img src="/images/server-cabinets/dataracks-303-eco-cabinets-1.jpg" alt="" />
+                    <img src="/images/server-cabinets/dataracks-303-eco-cabinets-2.jpg" alt="" />
+                    <img src="/images/server-cabinets/dataracks-303-eco-cabinets-3.jpg" alt="" />
+                </div>
             </div>
             ),
         },
@@ -216,7 +231,7 @@ const ServerCabinets = () => {
 
     return (
         <>
-            <Hero title="Server & Network Cabinets" image='/images/dataracks-server-cabinets-header.jpg' />
+            <Hero title="Server Networking Racks" image='/images/dataracks-server-cabinets-header.jpg' />
             <section className='max-w-7xl mx-auto px-4 py-32'>
                 <div className='grid md:grid-cols-3 gap-6'>
                     {serverData.map((item, index) => (

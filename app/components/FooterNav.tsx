@@ -12,7 +12,7 @@ const FooterNav = () => (
             </div>
 
             <div>
-                <h4 className=" mb-3 text-[#595853] uppercase">Solutions</h4>
+                <h4 className=" mb-3 text-[#0F0765] font-bold uppercase">Solutions</h4>
                 <ul className="space-y-3 capitalize">
                     {solutions.map((siglee, index) => <li key={siglee.title + index}><Link to={`/solutions/${stringToSlug(siglee.title)}`}>{siglee.title}</Link></li>)}
 
@@ -20,23 +20,23 @@ const FooterNav = () => (
             </div>
 
             <div>
-                <h4 className=" mb-3 text-[#595853] uppercase">Products</h4>
+                <h4 className=" mb-3 text-[#0F0765] font-bold uppercase">Products</h4>
                 <ul className="space-y-3 capitalize">
                     {allProducts.map((single, index) => <li key={single.title + index}><Link to={`/products${single.slug}`}>{single.title}</Link></li>)}
                 </ul>
             </div>
             <div>
-                <h4 className=" mb-3 text-[#595853] uppercase">Company</h4>
+                <h4 className=" mb-3 text-[#0F0765] font-bold uppercase">Company</h4>
                 <ul className="space-y-3 ">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About us</Link></li>
                     <li><Link to="/services">Services</Link></li>
-                    <li><Link to="#">News</Link></li>
+                    {/* <li><Link to="#">News</Link></li> */}
                     <li><Link to="/contact">Contact us</Link></li>
                 </ul>
             </div>
             <div>
-                <h4 className=" mb-3 text-[#595853] uppercase">Connect with Us</h4>
+                <h4 className=" mb-3 text-[#0F0765] font-bold uppercase">Connect with Us</h4>
                 <ul className="space-y-3">
                     <li><a href="https://x.com/dataracksuk" target="_blank">X (Twitter)</a></li>
                     <li><a href="https://www.linkedin.com/company/dataracks" target="_blank">LinkedIn</a></li>
@@ -44,7 +44,7 @@ const FooterNav = () => (
             </div>
         </div>
         <div className="border-t px-4 border-[#CFCFCF] md:flex justify-between max-w-7xl mx-auto pt-10 mt-10">
-            <p>© 2025 Dataracks. All Rights Reserved.</p>
+            <p>© {new Date().getFullYear()} Dataracks. All Rights Reserved.</p>
 
             <img src="/images/made-in-britain.jpg" alt="" />
         </div>

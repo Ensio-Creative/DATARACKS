@@ -23,11 +23,11 @@ export const allProducts = [
         slug: "/aisle-containment"
 
     },
-    // {
-    //     title: "Server & Network Cabinets",
-    //     image: "dataracks-home-server-cabinets-products.jpg",
-    //     slug: "/server-cabinets"
-    // },
+    {
+        title: "Racks & Cabinets",
+        image: "dataracks-home-server-cabinets-products.jpg",
+        slug: "/racks-and-cabinets"
+    },
     {
         title: "Cabinet Accessories",
         image: "dataracks-cabinet.jpg",
@@ -68,7 +68,7 @@ const products = () => {
             </section>
 
             <section className='max-w-7xl mx-auto my-20 px-4'>
-                <div className="grid md:grid-cols-3 gap-4">
+                <div className="grid md:grid-cols-4 gap-4">
                     {allProducts.map((single, index) => <div key={index}>
                         <Link to={`/products${single.slug}`}>
                             <img src={`/images/products/${single.image}`} className='w-full object-cover' alt="" />
