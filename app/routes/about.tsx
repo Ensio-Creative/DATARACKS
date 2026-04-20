@@ -48,7 +48,7 @@ const about = () => {
             <br /> <br />
             We’re immensely proud of our achievements in the industry and continue to  innovate, setting new standards in data centre solutions.</p>
         </div>
-        <div className='lg:w-[40%] bg-[#EAF4FF] lg:mt-0 mt-4 lg:p-20 p-4'>
+        <div className='lg:w-[40%] bg-[#EAF4FF] lg:mt-0 lg:p-20 p-4'>
           <div className='flex flex-col gap-8'>
             <div className=' py-4'>
               <p className='text-7xl font-light'>35+</p>
@@ -65,14 +65,14 @@ const about = () => {
           </div>
         </div>
       </div>
-      <div className='relative py-40 lg:my-32 overflow-hidden'>
+      <div className='relative py-0 my-32 overflow-hidden'>
         {/* <img className='max-w-5xl left-0 right-0 mx-auto absolute top-0 bottom-0 my-auto z-10' src="/images/dataracks-about.jpg" alt="" /> */}
 
         <Marquee>
-          <p className='md:text-8xl text-4xl font-light'>Data centre and telecom solutions - Data centre and telecom solutions</p>
+          <p className='md:text-8xl text-4xl font-light mr-4'>Data centre and telecom solutions - Data centre and telecom solutions </p>
         </Marquee>
         <Marquee direction='right'>
-          <p className='md:text-8xl text-4xl font-light'>Data centre and telecom solutions - Data centre and telecom solutions</p>
+          <p className='md:text-8xl text-4xl font-light mr-4'>Data centre and telecom solutions - Data centre and telecom solutions </p>
         </Marquee>
       </div>
 
