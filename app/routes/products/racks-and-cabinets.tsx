@@ -7,7 +7,7 @@ import type { Route } from './+types/racks-and-cabinets';
 export function meta({ }: Route.MetaArgs) {
     return [
         {
-            title: "Server Cabinets | Dataracks"
+            title: "Racks & Cabinets | Dataracks"
         },
     ];
 };
