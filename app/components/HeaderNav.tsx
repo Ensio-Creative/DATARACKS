@@ -33,11 +33,14 @@ const HeaderNav = () => {
     // Track scroll position
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
+            // Don't override isScrolled state on solutions pages
+            if (!location.pathname.includes("/solutions")) {
+                setIsScrolled(window.scrollY > 20);
+            }
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [location.pathname]);
 
 
     return (
