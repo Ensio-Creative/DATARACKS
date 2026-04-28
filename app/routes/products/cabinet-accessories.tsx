@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Hero from '~/components/Hero';
 
-import type { Route } from './+types/server-cabinets';
+import type { Route } from './+types/cabinet-accessories';
 import Modal from '~/components/Modal';
 export function meta({ }: Route.MetaArgs) {
     return [
         {
-            title: "Server Cabinets | Dataracks"
+            title: "Cabinet Accessories | Dataracks"
         },
     ];
 };
@@ -56,7 +56,7 @@ const ServerCabinets = () => {
 
     return (
         <>
-            <Hero title="Cabinets Accessories" image='/images/dataracks-server-cabinets-header.jpg' />
+            <Hero title="Cabinet Accessories" image='/images/dataracks-server-cabinets-header.jpg' />
             <section className='max-w-7xl mx-auto px-4 py-32'>
                 <div className='grid md:grid-cols-3 gap-6'>
                     {serverData.map((item, index) => (

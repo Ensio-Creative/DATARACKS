@@ -5,14 +5,14 @@ import Hero from '~/components/Hero';
 export function meta({ }: Route.MetaArgs) {
     return [
         {
-            title: "Electromechanical solutions | Dataracks"
+            title: "Electromechanical Solutions | Dataracks"
         },
     ];
 };
 const electromechanicalSolutions = () => {
     return (
         <>
-            <Hero title="Electromechanical solutions" image='/images/dataracks-electromechanical-solutions-header.jpg' />
+            <Hero title="Electromechanical Solutions" image='/images/dataracks-electromechanical-solutions-header.jpg' />
             <section className='max-w-6xl mx-auto p-4 py-20'>
                 <div className='grid md:grid-cols-3 gap-6'>
                     <img src="/images/dataracks-electromechanical-solutions-1.jpg" alt="" />

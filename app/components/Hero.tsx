@@ -17,7 +17,7 @@ const Hero = ({ image, title }: { image?: string; title?: string }) => {
                     </button>
                 </Link>
             </div>
-        </section> : <section className="relative bg-cover bg-center" style={{ backgroundImage: `url(${image})` }}>
+        </section> : <section className="relative lg:h-[80vh] bg-cover bg-center" style={{ backgroundImage: `url(${image})` }}>
             <div className="absolute inset-0 bg-[#0F07654D]"></div>
 
             <div className="relative max-w-7xl mx-auto md:py-68 py-40 md:px-6">

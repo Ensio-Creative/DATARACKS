@@ -12,7 +12,7 @@ import Accordion from '~/components/Accordion';
 export function meta({ }: Route.MetaArgs) {
     return [
         {
-            title: "Security Cages | Dataracks"
+            title: "Modular Security Cages | Dataracks"
         },
     ];
 };

@@ -49,7 +49,7 @@ export const allProducts = [
     //     slug: "/micro-data-centre"
     // },
     {
-        title: "Electromechanical solutions",
+        title: "Electromechanical Solutions",
         image: "dataracks-electromechanical-solutions.jpg",
         slug: "/electromechanical-solutions"
     }
